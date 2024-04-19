@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +14,31 @@
     {% endblock %}
     <title>Tasty Trove</title>
 </head>
+
 <body>
+<header>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#!" class="brand-logo left">Tasty Trove</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#">Home</a></li>
+                <li><a href="{{ url_for('get_recipies') }}">Recipies</a></li>
+                <li><a href="#">Register</a></li>
+                <li><a href="#">Log In</a></li>
+                <li><a href="#">Log Out</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="#">Home</a></li>
+        <li><a href="{{ url_for('get_recipies') }}">Recipies</a></li>
+        <li><a href="#">Register</a></li>
+        <li><a href="#">Log In</a></li>
+        <li><a href="#">Log Out</a></li>
+    </ul>
+</header>
 
     {% block content %}
     {% endblock%}
@@ -25,4 +50,5 @@
     {% block scripts %}
     {% endblock %}
 </body>
+
 </html>
