@@ -2,53 +2,94 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" type="text/css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-        type="text/css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
-    {% block styles %}
-    {% endblock %}
-    <title>Tasty Trove</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    type="text/css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+  {% block styles %}
+  {% endblock %}
+  <title>Tasty Trove</title>
 </head>
 
 <body>
-<header>
+  <header>
     <nav>
-        <div class="nav-wrapper">
-            <a href="#!" class="brand-logo left">Tasty Trove</a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="#">Home</a></li>
-                <li><a href="{{ url_for('get_recipies') }}">Recipies</a></li>
-                <li><a href="{{ url_for('register') }}">Register</a></li>
-                <li><a href="#">Log In</a></li>
-                <li><a href="#">Log Out</a></li>
-            </ul>
-        </div>
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo left">Tasty Trove</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#">Home</a></li>
+          <li><a href="{{ url_for('get_recipies') }}">Recipies</a></li>
+          <li><a href="{{ url_for('register') }}">Register</a></li>
+          <li><a href="#">Log In</a></li>
+          <li><a href="#">Log Out</a></li>
+        </ul>
+      </div>
     </nav>
 
     <ul class="sidenav" id="mobile-demo">
-        <li><a href="#">Home</a></li>
-        <li><a href="{{ url_for('get_recipies') }}">Recipies</a></li>
-        <li><a href="{{ url_for('register') }}">Register</a></li>
-        <li><a href="#">Log In</a></li>
-        <li><a href="#">Log Out</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="{{ url_for('get_recipies') }}">Recipies</a></li>
+      <li><a href="{{ url_for('register') }}">Register</a></li>
+      <li><a href="#">Log In</a></li>
+      <li><a href="#">Log Out</a></li>
     </ul>
-</header>
+  </header>
 
-    {% block content %}
-    {% endblock%}
+  {% block content %}
+  {% endblock%}
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-    {% block scripts %}
-    {% endblock %}
+
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Footer Content</h5>
+          <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Social Media</h5>
+          <ul>
+            <li>
+              <a class="grey-text text-lighten-3" href="http://www.facebook.com" target="_blank">
+                <i class="fa-brands fa-square-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="http://www.instagram.com" target="_blank">
+                <i class="fa-brands fa-square-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="http://www.twitter.com" target="_blank"><i
+                  class="fa-brands fa-square-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="http://www.youtube.com" target="_blank">
+                <i class="fa-brands fa-square-youtube"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        © 2024 Copyright Lee Edwards
+      </div>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  {% block scripts %}
+  {% endblock %}
 </body>
 
 </html>
