@@ -27,6 +27,35 @@ def get_recipies():
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    if request.method == "POST":
+        password = request.form.get("password")
+        if not password:
+            flash("Password cannot be empty")
+            return redirect(url_for("register"))
+
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+        existing_email = mongo.db.users.find_one(
+            {"email": request.form.get("email").lower()})
+
+        if existing_user:
+            flash("Username already exists")
+            return redirect(url_for("register"))
+
+        if existing_email:
+            flash("Email already in use")
+            return redirect(url_for("register"))
+
+        register = {
+            "username": request.form.get("username").lower(),
+            "password": generate_password_hash(request.form.get("password"))
+        }
+        mongo.db.users.insert_one(register)
+
+        session["user"] = request.form.get("username").lower()
+        flash("Registration successfull")
+
+        
     return render_template("register.html")
 
 
