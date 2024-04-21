@@ -25,7 +25,7 @@
           <li><a href="#">Home</a></li>
           <li><a href="{{ url_for('get_recipies') }}">Recipies</a></li>
           <li><a href="{{ url_for('register') }}">Register</a></li>
-          <li><a href="#">My Account</a></li>
+          <li><a href="{{ url_for('account', username=session['user']) }}">My Account</a></li>
           <li><a href="{{ url_for('login') }}">Log In</a></li>
           <li><a href="#">Log Out</a></li>
         </ul>
@@ -36,7 +36,7 @@
       <li><a href="#">Home</a></li>
       <li><a href="{{ url_for('get_recipies') }}">Recipies</a></li>
       <li><a href="{{ url_for('register') }}">Register</a></li>
-      <li><a href="#">My Account</a></li>
+      <li><a href="{{ url_for('account', username=session) }}">My Account</a></li>
       <li><a href="{{ url_for('login') }}">Log In</a></li>
       <li><a href="#">Log Out</a></li>
     </ul>
