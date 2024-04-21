@@ -25,29 +25,33 @@ def get_recipies():
     return render_template("recipies.html", recipies=recipies)
 
 
+# Route for Registration
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
         password = request.form.get("password")
         confirm = request.form.get("confirm")
 
+        # Check if passwords match
         if password != confirm:
             flash("Passwords do not match")
             return redirect(url_for("register"))
 
+        # Checks if username exists
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
-        existing_email = mongo.db.users.find_one(
-            {"email": request.form.get("email").lower()})
-
         if existing_user:
             flash("Username already exists")
             return redirect(url_for("register"))
 
+        # Checks if email exists
+        existing_email = mongo.db.users.find_one(
+            {"email": request.form.get("email").lower()})
         if existing_email:
             flash("Email already in use")
             return redirect(url_for("register"))
 
+        # Register user
         register = {
             "email": request.form.get("email").lower(),
             "username": request.form.get("username").lower(),
@@ -55,12 +59,14 @@ def register():
         }
         mongo.db.users.insert_one(register)
 
+        # Logs in user after registration and puts user into session cookie
         session["user"] = request.form.get("username").lower()
         flash("Registration successfull")
         return redirect(url_for("account", username=session["user"]))
     return render_template("register.html")
 
 
+# Route for user Log In
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -68,6 +74,7 @@ def login():
             {"username": request.form.get("username").lower()})
 
         if existing_user:
+            # Check if password match
             if check_password_hash(
                 existing_user["password"], request.form.get("password")):
                     session["user"] = request.form.get("username").lower()
@@ -85,6 +92,7 @@ def login():
     return render_template("login.html")
 
 
+# Route for user's account page
 @app.route("/account/<username>", methods=["GET", "POST"])
 def account(username):
     username = mongo.db.users.find_one(
@@ -96,6 +104,7 @@ def account(username):
     return render_template("account.html", username=username)
 
 
+# Route for user Log Out
 @app.route("/logout")
 def logout():
     flash("You have been successfully logged out")
@@ -103,6 +112,7 @@ def logout():
     return redirect(url_for("login"))
 
 
+# Runs flask app
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
         port=int(os.environ.get("PORT")),
