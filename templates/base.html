@@ -27,7 +27,7 @@
           <li><a href="{{ url_for('register') }}">Register</a></li>
           <li><a href="{{ url_for('account', username=session['user']) }}">My Account</a></li>
           <li><a href="{{ url_for('login') }}">Log In</a></li>
-          <li><a href="{{ url_for('login') }}">Log Out</a></li>
+          <li><a href="{{ url_for('logout') }}">Log Out</a></li>
         </ul>
       </div>
     </nav>
@@ -38,7 +38,7 @@
       <li><a href="{{ url_for('register') }}">Register</a></li>
       <li><a href="{{ url_for('account', username=session) }}">My Account</a></li>
       <li><a href="{{ url_for('login') }}">Log In</a></li>
-      <li><a href="{{ url_for('login') }}">Log Out</a></li>
+      <li><a href="{{ url_for('logout') }}">Log Out</a></li>
     </ul>
   </header>
 
