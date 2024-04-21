@@ -28,14 +28,8 @@ def get_recipies():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
-        email = request.form.get("email")
-        username = request.form.get("username")
         password = request.form.get("password")
         confirm = request.form.get("confirm")
-        
-        if not (email and username and password and confirm):
-            flash("All fields are required")
-            return redirect(url_for("register"))
 
         if password != confirm:
             flash("Passwords do not match")
