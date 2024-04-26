@@ -4,22 +4,35 @@
     <h3 class="center-align">Add Recipe</h3>
 
     <div class="row">
-        <form class="col s12 m6 offset-m3" method="POST" action="#">
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="prefix"></i>
-                    <input id="" type="text" class="validate">
-                    <label for="">Recipe Name</label>
-                </div>
-                <div class="input-field col s12">
-                    <i class="prefix"></i>
-                    <input id="" type="text" class="validate">
-                    <label for="">Ingredients</label>
-                </div>
-                <div class="input-field col s12">
-                    <i class="prefix"></i>
-                    <input id="" type="text" class="validate">
-                    <label for="">Instructions</label>
+        <form class="col s12 m6 offset-m3" method="POST" action="{{ url_for('add_recipe') }}">
+            <div class="card-panel">
+                <div class="row">
+                    <div class="input-field col s12 m6">
+                        <i class="prefix fas fa-utensils"></i>
+                        <input id="recipe_name" name="recipe_name" type="text" class="validate" required>
+                        <label for="recipe_name">Recipe Name</label>
+                    </div>
+                    <div class="input-field col s12 m6">
+                        <i class="prefix fas fa-tags"></i>
+                        <input id="tags" name="tags" type="text" class="validate" required>
+                        <label for="">Tags</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <i class="prefix fas fa-list-ul"></i>
+                        <input id="recipe_ingredients" name="recipe_ingredients" type="text" class="validate" required>
+                        <label for="recipe_ingredients">Ingredients</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <i class="prefix fas fa-book"></i>
+                        <input id="recipe_instructions" name="recipe_instructions" type="text" class="validate" required>
+                        <label for="recipe_instructions">Instructions</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <button class="btn waves-effect waves-dark" type="submit" name="action" required>
+                            Submit
+                            <i class="fas fa-paper-plane right"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </form>
