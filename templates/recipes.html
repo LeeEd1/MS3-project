@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 
+    <h3 class="center-align">Recipes</h3>
+
     <div class="row">
         {% for recipe in recipes %}
                 <div class="col s12 m6 l4">
@@ -16,7 +18,7 @@
                                 <div class="center-align">
                                     <a href="#">View full instructions</a>
                                     <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn-small">Edit</a>
-                                    <a class="waves-effect waves-light btn-small">Delete</a>
+                                    <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn-small">Delete</a>
                                 </div>
                             </div>
                         </div>
