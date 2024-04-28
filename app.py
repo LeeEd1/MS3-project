@@ -138,13 +138,15 @@ def edit_recipe(recipe_id):
             "recipe_name": request.form.get("recipe_name"),
             "tags": request.form.get("tags"),
             "recipe_ingredients": request.form.get("recipe_ingredients"),
-            "recipe_instructions": request.form.get("recipe_instructions")
+            "recipe_instructions": request.form.get("recipe_instructions"),
+            "photo_url": request.form.get("photo_url")
         }
         mongo.db.recipes.update_one({"_id": ObjectId(recipe_id)}, {"$set": update_recipe})
         flash("Your recipe has been updated")
         return redirect(url_for("get_recipes"))
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    
     return render_template("edit_recipe.html", recipe=recipe)
 
 

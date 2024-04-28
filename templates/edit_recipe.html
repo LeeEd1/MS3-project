@@ -9,23 +9,28 @@
                 <div class="row">
                     <div class="input-field col s12 m6">
                         <i class="prefix fas fa-utensils"></i>
-                        <input id="recipe_name" name="recipe_name" type="text" class="validate" required>
+                        <input id="recipe_name" name="recipe_name" type="text" class="validate" required value="{{ recipe.recipe_name }}">
                         <label for="recipe_name">Recipe Name</label>
                     </div>
                     <div class="input-field col s12 m6">
                         <i class="prefix fas fa-tags"></i>
-                        <input id="tags" name="tags" type="text" class="validate" required>
+                        <input id="tags" name="tags" type="text" class="validate" required value="{{ recipe.tags }}">
                         <label for="">Tags</label>
                     </div>
                     <div class="input-field col s12">
                         <i class="prefix fas fa-list-ul"></i>
-                        <input id="recipe_ingredients" name="recipe_ingredients" type="text" class="validate" required>
+                        <input id="recipe_ingredients" name="recipe_ingredients" type="text" class="validate" required value="{{ recipe.recipe_ingredients }}">
                         <label for="recipe_ingredients">Ingredients</label>
                     </div>
                     <div class="input-field col s12">
                         <i class="prefix fas fa-book"></i>
-                        <input id="recipe_instructions" name="recipe_instructions" type="text" class="validate" required>
+                        <input id="recipe_instructions" name="recipe_instructions" type="text" class="validate" required value="{{ recipe.recipe_instructions }}">
                         <label for="recipe_instructions">Instructions</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <i class="prefix fas fa-link"></i>
+                        <input id="photo_url" name="photo_url" type="text" class="validate" required value="{{ recipe.photo_url }}">
+                        <label for="photo_url">Photo URL</label>
                     </div>
                     <div class="input-field col s12">
                         <button class="btn waves-effect waves-dark" type="submit" name="action" required>
