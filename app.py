@@ -121,7 +121,8 @@ def add_recipe():
             "tags": request.form.get("tags"),
             "recipe_ingredients": request.form.get("recipe_ingredients"),
             "recipe_instructions": request.form.get("recipe_instructions"),
-            "photo_url": request.form.get("photo_url")
+            "photo_url": request.form.get("photo_url"),
+            "author_id": session["user"]
         }
         mongo.db.recipes.insert_one(recipe)
         flash("Recipe successfully added")
@@ -139,7 +140,8 @@ def edit_recipe(recipe_id):
             "tags": request.form.get("tags"),
             "recipe_ingredients": request.form.get("recipe_ingredients"),
             "recipe_instructions": request.form.get("recipe_instructions"),
-            "photo_url": request.form.get("photo_url")
+            "photo_url": request.form.get("photo_url"),
+            "author_id": session["user"]
         }
         mongo.db.recipes.update_one({"_id": ObjectId(recipe_id)}, {"$set": update_recipe})
         flash("Your recipe has been updated")
