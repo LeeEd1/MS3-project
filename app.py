@@ -120,7 +120,8 @@ def add_recipe():
             "recipe_name": request.form.get("recipe_name"),
             "tags": request.form.get("tags"),
             "recipe_ingredients": request.form.get("recipe_ingredients"),
-            "recipe_instructions": request.form.get("recipe_instructions")
+            "recipe_instructions": request.form.get("recipe_instructions"),
+            "photo_url": request.form.get("photo_url")
         }
         mongo.db.recipes.insert_one(recipe)
         flash("Recipe successfully added")
@@ -129,6 +130,7 @@ def add_recipe():
     return render_template("add_recipe.html")
 
 
+# Route for edit recipe
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
     if request.method == "POST":
@@ -146,6 +148,7 @@ def edit_recipe(recipe_id):
     return render_template("edit_recipe.html", recipe=recipe)
 
 
+# Route for delete recipe
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
     mongo.db.recipes.delete_one({"_id": ObjectId(recipe_id)})
