@@ -53,6 +53,8 @@ def register():
 
         # Register user
         register = {
+            "first_name": request.form.get("first_name"),
+            "last_name": request.form.get("last_name"),
             "email": request.form.get("email").lower(),
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password"))
@@ -61,7 +63,7 @@ def register():
 
         # Logs in user after registration and puts user into session cookie
         session["user"] = request.form.get("username").lower()
-        flash("Registration successfull")
+        flash("Registration successful")
         return redirect(url_for("account", username=session["user"]))
     return render_template("register.html")
 
