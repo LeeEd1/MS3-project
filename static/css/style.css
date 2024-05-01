@@ -6,6 +6,10 @@
     border-radius: 5px;
 }
 
+.card.medium .card-image {
+    height: 50%;
+}
+
 .socials {
     display: flex;
 }
