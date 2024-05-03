@@ -106,7 +106,6 @@ def account(username):
     user = mongo.db.users.find_one({"username": username})
 
     if user:
-        print(user)
         first_name = user.get("first_name")
         last_name = user.get("last_name")
 
