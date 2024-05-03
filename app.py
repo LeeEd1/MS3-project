@@ -70,6 +70,7 @@ def register():
             "last_name": request.form.get("last_name"),
             "email": request.form.get("email").lower(),
             "username": request.form.get("username").lower(),
+            "fav_cuisine": request.form.get("fav_cuisine"),
             "password": generate_password_hash(request.form.get("password")),
             "date_joined": datetime.now()
         }
@@ -150,7 +151,7 @@ def add_recipe():
     if request.method == "POST":
         recipe = {
             "recipe_name": request.form.get("recipe_name"),
-            "tags": request.form.get("tags"),
+            "cuisine": request.form.get("cuisine"),
             "recipe_ingredients": request.form.get("recipe_ingredients"),
             "recipe_instructions": request.form.get("recipe_instructions"),
             "photo_url": request.form.get("photo_url"),
@@ -169,7 +170,7 @@ def edit_recipe(recipe_id):
     if request.method == "POST":
         update_recipe = {
             "recipe_name": request.form.get("recipe_name"),
-            "tags": request.form.get("tags"),
+            "cuisine": request.form.get("cuisine"),
             "recipe_ingredients": request.form.get("recipe_ingredients"),
             "recipe_instructions": request.form.get("recipe_instructions"),
             "photo_url": request.form.get("photo_url"),
