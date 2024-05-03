@@ -5,6 +5,8 @@ from flask import (
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
+from datetime import datetime
+
 if os.path.exists("env.py"):
     import env
 
@@ -68,7 +70,8 @@ def register():
             "last_name": request.form.get("last_name"),
             "email": request.form.get("email").lower(),
             "username": request.form.get("username").lower(),
-            "password": generate_password_hash(request.form.get("password"))
+            "password": generate_password_hash(request.form.get("password")),
+            "date_joined": datetime.now()
         }
         mongo.db.users.insert_one(register)
 
@@ -105,6 +108,18 @@ def login():
     return render_template("login.html")
 
 
+# Route for Delete user
+@app.route("/delete_user/<user_id>", methods=["GET", "POST"])
+def delete_user(user_id):
+    if request.method == "POST":
+        mongo.db.users.delete_one({"_id": ObjectId(user_id)})
+        flash("We are sorry you're leaving us. Please feel free to rejoin at any time!")
+        session.pop("user")
+        return redirect(url_for("home"))
+
+    return redirect(url_for("home"))
+
+
 # Route for user's account page
 @app.route("/account/<username>", methods=["GET", "POST"])
 def account(username):
@@ -113,8 +128,10 @@ def account(username):
     if user:
         first_name = user.get("first_name")
         last_name = user.get("last_name")
+        date_joined = user.get("date_joined").strftime("%Y-%m-%d")
 
-        return render_template("account.html", first_name=first_name, last_name=last_name, username=username)
+        return render_template("account.html", first_name=first_name, last_name=last_name,
+         username=username, date_joined=date_joined, user=user)
 
     return render_template("account.html", username=username)
 
