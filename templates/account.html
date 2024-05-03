@@ -8,7 +8,11 @@
         <div class="col s12 m8 offset-m2">
             <div class="card-panel">
                 <div class="row">
-                    <h4 class="center-align">{{username}}'s Profile</h4>
+                    <h4 class="center-align">{{username.capitalize()}}'s Profile</h4>
+                    <div>
+                        <p><strong>First Name:</strong> {{ first_name }}</p>
+                        <p><strong>Last Name:</strong> {{ last_name }}</p>
+                    </div>
                 </div>
             </div>
         </div>

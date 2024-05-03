@@ -103,11 +103,14 @@ def login():
 # Route for user's account page
 @app.route("/account/<username>", methods=["GET", "POST"])
 def account(username):
-    username = mongo.db.users.find_one(
-        {"username": session["user"]})["username"]
-    
-    if session["user"]:
-        return render_template("account.html", username=username)
+    user = mongo.db.users.find_one({"username": username})
+
+    if user:
+        print(user)
+        first_name = user.get("first_name")
+        last_name = user.get("last_name")
+
+        return render_template("account.html", first_name=first_name, last_name=last_name, username=username)
 
     return render_template("account.html", username=username)
 
