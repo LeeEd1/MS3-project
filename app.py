@@ -128,6 +128,7 @@ def account(username):
     return render_template("account.html", user=user)
 
 
+# Route for edit account
 @app.route("/edit_account/<user_id>", methods=["GET", "POST"])
 def edit_account(user_id):
     if request.method == "POST":
