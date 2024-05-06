@@ -127,7 +127,23 @@ def account(username):
     user = mongo.db.users.find_one({"username": username})
     return render_template("account.html", user=user)
 
+
+@app.route("/edit_account/<user_id>", methods=["GET", "POST"])
+def edit_account(user_id):
+    if request.method == "POST":
+        update_account = {
+            "email": request.form.get("email"),
+            "first_name": request.form.get("first_name"),
+            "last_name": request.form.get("last_name"),
+            "username": request.form.get("username").lower(),
+            "fav_cuisine": request.form.get("fav_cuisine"),
+        }
+        mongo.db.users.update_one({"_id": ObjectId(user_id)}, {"$set": update_account})
+        flash("Your details have been updated successfully")
+        return redirect(url_for("account", username=session["user"]))
     
+    user = mongo.db.users.find_one({"_id": ObjectId(user_id)})
+    return render_template("edit_account.html", user=user, user_id=user_id)
 
 
 # Route for user Log Out
