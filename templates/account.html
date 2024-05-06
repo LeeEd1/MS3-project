@@ -8,12 +8,12 @@
         <div class="col s12 m8 offset-m2">
             <div class="card-panel">
                 <div class="row">
-                    <h4 class="center-align">{{username.capitalize()}}'s Profile</h4>
+                    <h4 class="center-align">{{user.username.capitalize()}}'s Profile</h4>
                     <div class="center-align">
-                        <p><strong>First Name:</strong> {{ first_name }}</p>
-                        <p><strong>Last Name:</strong> {{ last_name }}</p>
-                        <p><strong>Favourite Cuisine:</strong> {{ cuisine }}</p>
-                        <p><strong>Date Joined:</strong> {{ date_joined }}</p>
+                        <p><strong>First Name:</strong> {{ user.first_name }}</p>
+                        <p><strong>Last Name:</strong> {{ user.last_name }}</p>
+                        <p><strong>Favourite Cuisine:</strong> {{ user.fav_cuisine }}</p>
+                        <p><strong>Date Joined:</strong> {{ user.date_joined.strftime('%Y-%m-%d') }}</p>
                     </div>
                     <div>
                         <a href="#modal1" class="modal-trigger waves-effect waves-light btn-small red darken-3">Delete</a>

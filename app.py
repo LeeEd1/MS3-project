@@ -125,16 +125,9 @@ def delete_user(user_id):
 @app.route("/account/<username>", methods=["GET", "POST"])
 def account(username):
     user = mongo.db.users.find_one({"username": username})
+    return render_template("account.html", user=user)
 
-    if user:
-        first_name = user.get("first_name")
-        last_name = user.get("last_name")
-        date_joined = user.get("date_joined").strftime("%Y-%m-%d")
-
-        return render_template("account.html", first_name=first_name, last_name=last_name,
-         username=username, date_joined=date_joined, user=user)
-
-    return render_template("account.html", username=username)
+    
 
 
 # Route for user Log Out
