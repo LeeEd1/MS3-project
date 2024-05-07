@@ -6,8 +6,19 @@
     border-radius: 5px;
 }
 
+.card.medium {
+    height: 320px;
+    border-radius: 5%;
+}
+
+.card.medium .card-image+.card-content {
+    max-height: 50%;
+}
+
 .card.medium .card-image {
     height: 50%;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
 }
 
 .card .card-content {
@@ -16,6 +27,11 @@
 
 .vr-button {
     padding: 10px;
+}
+
+.vr-button a {
+    color: black;
+    font-weight: bold;
 }
 
 .socials {
