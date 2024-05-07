@@ -182,6 +182,11 @@ def logout():
 # Route for add recipe
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
+    # Checks if the user is in session
+    if "user" not in session:
+        flash("Please log in or register to see this page")
+        return redirect(url_for("login"))
+
     if request.method == "POST":
         recipe = {
             "recipe_name": request.form.get("recipe_name"),
@@ -195,16 +200,18 @@ def add_recipe():
         flash("Recipe successfully added")
         return redirect(url_for("get_recipes"))
 
-    if "user" not in session:
-        flash("Please log in or register to see this page")
-        return redirect(url_for("login"))
-
     return render_template("add_recipe.html")
 
 
 # Route for edit recipe
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
+    # Checks if the user is in session
+    if "user" not in session:
+        flash("Please log in or register to see this page")
+        return redirect(url_for("login"))
+
+    # Checks if form is submitted and updates the recipe with new data
     if request.method == "POST":
         update_recipe = {
             "recipe_name": request.form.get("recipe_name"),
