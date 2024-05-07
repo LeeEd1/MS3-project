@@ -125,6 +125,10 @@ def delete_user(user_id):
 # Route for user's account page
 @app.route("/account/<username>", methods=["GET", "POST"])
 def account(username):
+    if "user" not in session or session["user"] != username:
+        flash("Please log in to see this page")
+        return redirect(url_for("login"))
+
     user = mongo.db.users.find_one({"username": username})
     return render_template("account.html", user=user)
 
