@@ -72,7 +72,8 @@ def register():
             "username": request.form.get("username").lower(),
             "fav_cuisine": request.form.get("fav_cuisine"),
             "password": generate_password_hash(request.form.get("password")),
-            "date_joined": datetime.now()
+            "date_joined": datetime.now(),
+            "is_admin": False
         }
         mongo.db.users.insert_one(register)
 
@@ -149,7 +150,6 @@ def edit_account(user_id):
         if existing_username:
             flash("Username already in use")
             return redirect(url_for("edit_account", user_id=user_id))
-
         # Updates account if email and username are not in use
         update_account = {
             "email": request.form.get("email"),
@@ -190,6 +190,10 @@ def add_recipe():
         mongo.db.recipes.insert_one(recipe)
         flash("Recipe successfully added")
         return redirect(url_for("get_recipes"))
+
+    if "user" not in session:
+        flash("Please log in or register to see this page")
+        return redirect(url_for("login"))
 
     return render_template("add_recipe.html")
 
