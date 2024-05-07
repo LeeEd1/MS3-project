@@ -132,6 +132,25 @@ def account(username):
 @app.route("/edit_account/<user_id>", methods=["GET", "POST"])
 def edit_account(user_id):
     if request.method == "POST":
+        # Retrieves submitted form data
+        new_email = request.form.get("email")
+        new_username = request.form.get("username").lower()
+
+        # Checks if new email is already in use by another user
+        existing_email = mongo.db.users.find_one(
+            {"email": new_email.lower(), "_id": {"$ne": ObjectId(user_id)}})
+        if existing_email:
+            flash("Email already in use")
+            return redirect(url_for("edit_account", user_id=user_id))
+        
+        # Checks if new username is already in use by another user
+        existing_username = mongo.db.users.find_one(
+            {"username": new_username.lower(), "_id": {"$ne": ObjectId(user_id)}})
+        if existing_username:
+            flash("Username already in use")
+            return redirect(url_for("edit_account", user_id=user_id))
+
+        # Updates account if email and username are not in use
         update_account = {
             "email": request.form.get("email"),
             "first_name": request.form.get("first_name"),
@@ -143,6 +162,7 @@ def edit_account(user_id):
         flash("Your details have been updated successfully")
         return redirect(url_for("account", username=session["user"]))
     
+    # Gets the user by id and renders edit_account page
     user = mongo.db.users.find_one({"_id": ObjectId(user_id)})
     return render_template("edit_account.html", user=user, user_id=user_id)
 
