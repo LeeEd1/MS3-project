@@ -64,6 +64,7 @@ def register():
             flash("Email already in use")
             return redirect(url_for("register"))
 
+        # Counts user document, gets total and increments by 1
         total = mongo.db.users.count_documents({})
         user_id = total + 1
 
@@ -240,6 +241,17 @@ def delete_recipe(recipe_id):
     mongo.db.recipes.delete_one({"_id": ObjectId(recipe_id)})
     flash("Your recipe has been deleted")
     return redirect(url_for("get_recipes"))
+
+
+# User error handlers
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template('404.html'), 404
+
+
+@app.errorhandler(500)
+def internal_server_error(error):
+    return render_template('500.html'), 500
 
 
 # Runs flask app
