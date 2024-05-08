@@ -24,7 +24,7 @@
                     </div>
                     <div class="input-field col s12">
                         <i class="prefix fas fa-book"></i>
-                        <input id="recipe_instructions" name="recipe_instructions" type="text" class="validate" required value="{{ recipe.recipe_instructions }}">
+                        <textarea id="recipe_instructions" name="recipe_instructions" class="materialize-textarea validate" required>{{ recipe.recipe_instructions }}</textarea>
                         <label for="recipe_instructions">Instructions</label>
                     </div>
                     <div class="input-field col s12">
