@@ -211,6 +211,12 @@ def edit_recipe(recipe_id):
         flash("Please log in or register to see this page")
         return redirect(url_for("login"))
 
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+
+    if recipe is None or recipe.get('author_id') != session["user"]:
+        flash("You are not authorized to access this recipe")
+        return redirect(url_for("get_recipes"))
+
     # Checks if form is submitted and updates the recipe with new data
     if request.method == "POST":
         update_recipe = {
