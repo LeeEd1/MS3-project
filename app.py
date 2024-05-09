@@ -64,13 +64,8 @@ def register():
             flash("Email already in use")
             return redirect(url_for("register"))
 
-        # Counts user document, gets total and increments by 1
-        total = mongo.db.users.count_documents({})
-        user_id = total + 1
-
         # Register user
         register = {
-            "user_id": user_id,
             "first_name": request.form.get("first_name"),
             "last_name": request.form.get("last_name"),
             "email": request.form.get("email").lower(),
