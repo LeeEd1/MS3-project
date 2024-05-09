@@ -129,6 +129,11 @@ def account(username):
         flash("Please log in to see this page")
         return redirect(url_for("login"))
 
+    if session["user"] != username:
+        flash("You do not have permission to view this page.")
+        return redirect(url_for("home"))
+
+
     user = mongo.db.users.find_one({"username": username})
     return render_template("account.html", user=user)
 
@@ -248,7 +253,7 @@ def delete_recipe(recipe_id):
     if recipe is None or recipe.get('author_id') != session["user"]:
         flash("You are not authorized to access this recipe")
         return redirect(url_for("get_recipes"))
-        
+
     mongo.db.recipes.delete_one({"_id": ObjectId(recipe_id)})
     flash("Your recipe has been deleted")
     return redirect(url_for("get_recipes"))
