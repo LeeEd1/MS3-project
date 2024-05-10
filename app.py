@@ -292,6 +292,13 @@ def edit_category(category_id):
     return render_template("edit_category.html", category=category)
 
 
+@app.route("/delete_category/<category_id>", methods=["POST"])
+def delete_category(category_id):
+    mongo.db.categories.delete_one({"_id": ObjectId(category_id)})
+    flash("Category Successfully Deleted!")
+    return redirect(url_for("get_categories"))
+
+
 # User error handlers
 @app.errorhandler(404)
 def page_not_found(error):
