@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h3 class="center-align">Add Category</h3>
+
+    <div class="row">
+        <form class="col s12 m6 offset-m3" method="POST" action="{{ url_for('add_category') }}">
+            <div class="card-panel">
+                <div class="row">
+                    <div class="input-field col s12 m6 offset-m3 center-align">
+                        <i class="prefix fas fa-utensils"></i>
+                        <input id="category_name" name="category_name" type="text" class="validate" required>
+                        <label for="category_name">Category Name</label>
+                    </div>
+                    <div class="input-field col s12 center-align">
+                        <button class="btn waves-effect waves-dark deep-orange accent-2" type="submit" name="action" required>
+                            Submit
+                            <i class="fas fa-paper-plane right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}
