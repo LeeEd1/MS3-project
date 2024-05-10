@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h3 class="center-align">Edit Category</h3>
+
+    <div class="row">
+        <form class="col s12 m6 offset-m3" method="POST" action="{{ url_for('edit_category', category_id=category._id) }}">
+            <div class="card-panel">
+                <div class="row">
+                    <div class="input-field col s12 m6 offset-m3 center-align">
+                        <i class="prefix fas fa-utensils"></i>
+                        <input id="category_name" name="category_name" type="text" class="validate" value="{{ category.category_name }}" required>
+                        <label for="category_name">Category Name</label>
+                    </div>
+                    <div class="input-field col s12 center-align">
+                        <button class="btn waves-effect waves-dark deep-orange accent-2" type="submit" name="action" required>
+                            Update Category
+                            <i class="fas fa-paper-plane right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}
