@@ -259,12 +259,22 @@ def delete_recipe(recipe_id):
     return redirect(url_for("get_recipes"))
 
 
+# Route for admin page to add remove categories
 @app.route("/get_categories")
 def get_categories():
+    if "user" not in session:
+        flash("Please log in to access this page")
+        return redirect(url_for("login"))
+
+    if session.get("user") != "admin":
+        flash("You do not have permission to view this page.")
+        return redirect(url_for("home"))
+    
     categories = list(mongo.db.categories.find())
     return render_template("categories.html", categories=categories)
 
 
+# Route for Add Category
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
     if request.method == "POST":
@@ -278,6 +288,7 @@ def add_category():
     return render_template("add_category.html")
 
 
+# Route for Edit Category
 @app.route("/edit_category/<category_id>", methods=["GET", "POST"])
 def edit_category(category_id):
     if request.method == "POST":
@@ -292,8 +303,10 @@ def edit_category(category_id):
     return render_template("edit_category.html", category=category)
 
 
+# Route for Delete Category
 @app.route("/delete_category/<category_id>", methods=["POST"])
 def delete_category(category_id):
+
     mongo.db.categories.delete_one({"_id": ObjectId(category_id)})
     flash("Category Successfully Deleted!")
     return redirect(url_for("get_categories"))
