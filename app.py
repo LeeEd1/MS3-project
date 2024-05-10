@@ -277,6 +277,14 @@ def get_categories():
 # Route for Add Category
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
+    if "user" not in session:
+        flash("Please log in to access this page")
+        return redirect(url_for("login"))
+
+    if session.get("user") != "admin":
+        flash("You do not have permission to view this page.")
+        return redirect(url_for("home"))
+
     if request.method == "POST":
         category = {
             "category_name": request.form.get("category_name")
@@ -291,6 +299,14 @@ def add_category():
 # Route for Edit Category
 @app.route("/edit_category/<category_id>", methods=["GET", "POST"])
 def edit_category(category_id):
+    if "user" not in session:
+        flash("Please log in to access this page")
+        return redirect(url_for("login"))
+
+    if session.get("user") != "admin":
+        flash("You do not have permission to view this page.")
+        return redirect(url_for("home"))
+
     if request.method == "POST":
         update_category = {
             "category_name": request.form.get("category_name")
@@ -306,6 +322,13 @@ def edit_category(category_id):
 # Route for Delete Category
 @app.route("/delete_category/<category_id>", methods=["POST"])
 def delete_category(category_id):
+    if "user" not in session:
+        flash("Please log in to access this page")
+        return redirect(url_for("login"))
+
+    if session.get("user") != "admin":
+        flash("You do not have permission to view this page.")
+        return redirect(url_for("home"))
 
     mongo.db.categories.delete_one({"_id": ObjectId(category_id)})
     flash("Category Successfully Deleted!")
