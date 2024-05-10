@@ -322,14 +322,6 @@ def edit_category(category_id):
 # Route for Delete Category
 @app.route("/delete_category/<category_id>", methods=["POST"])
 def delete_category(category_id):
-    if "user" not in session:
-        flash("Please log in to access this page")
-        return redirect(url_for("login"))
-
-    if session.get("user") != "admin":
-        flash("You do not have permission to view this page.")
-        return redirect(url_for("home"))
-
     mongo.db.categories.delete_one({"_id": ObjectId(category_id)})
     flash("Category Successfully Deleted!")
     return redirect(url_for("get_categories"))
