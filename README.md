@@ -1,110 +1,222 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Tasty Trove
 
-Welcome LeeEd1 Edwards,
+![Site accross devices]()
+Tasty Trove was founded with the intention of fostering a community where food enthusiasts can freely share their favorite recipes, gain culinary inspiration, and explore diverse cuisines. Our platform encourages users to connect with like-minded individuals, discover new flavors, and embark on culinary adventures together.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## UX:
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+### Site purose
 
-## Gitpod Reminders
+At Tasty Trove, our goal is  to help you discover, share and enjoy delicious recipes from around the world. Whether you're a seasoned chef or a kitchen novice, our platform is your go-to destination for finding tasty dishes, getting inspired and connecting with fellow food lovers!
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+### Site goal
 
-`python3 -m http.server`
+The site goal is to become a popular online recipe sharing hub for foodies around the world. We aim to provide a vibrant community-driven platform that inspires creativity in the kitchen and encourage culinary exploration. At Tasty Trove we aim to make cooking more accessible and enjoyable for everyone.
 
-A blue button should appear to click: _Make Public_,
+### Audience
 
-Another blue button should appear to click: _Open Browser_.
+The site audience is aimed at anybody willing and able, even children with parental guidance.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### Communication
 
-A blue button should appear to click: _Make Public_,
+The communication of the page is designed to be easily understandable for any user. It features clear buttons, a user friendly modal pop up and employs easy to read fonts with distinctly displayed colors, aiming for universal accessability.
 
-Another blue button should appear to click: _Open Browser_.
+### Registered user goals
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+- Discover new recipes.
+- Share their own Recipes.
+- Learning new cuisines and cooking skills.
+- Be able to update an existing recipe if they have found a way to make it better.
+- Delete a recipe if they no longer wish to share it.
 
-To log into the Heroku toolbelt CLI:
+### New user goals
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+- Be able to easily navigate the site.
+- Browse existing recipes.
+- Be able to register if interested.
+- Be able to log out after browsing 
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### Future user goals
 
-------
+- To be able to like a recipe.
+- To be able to comment on a recipe
 
-## Release History
+## Design:
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### Wireframes
 
-**September 20 2023:** Update Python version to 3.9.17.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+### Typography
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+MedievalSharp was selected for the heading of my page with gothic selected for the body of my page. All fonts obtained from googlefonts.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+### Color scheme
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+My color scheme was orange black and white as shown below:
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+### Images
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+I do not hold any rights to the images that are uploaded as they are uploaded via photo URL
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+## Features
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+### Landing Page
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+### Game board
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+Once the user clicks start game the game board is revealed and the timer starts the countdown. 
+![here](assets/documentation/game-board.PNG)
 
-------
+### Modals
 
-## FAQ about the uptime script
+![Here](assets/documentation/modal-instructions.PNG)
+![Here](assets/documentation/win-modal.PNG) 
+![Here](assets/documentation/game-over.PNG)
 
-**Why have you added this script?**
+Above are 3 modals the player will see in their journey through the game. The first is the instructions modal which pops up when the player clicks How to play, The second is the win modal which pops up if the player is successful, The third is the game over modal.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+### Footer
 
-**How will this affect me?**
+I have also added social media links along with youtube for more viewing pleasure.
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+## Testing:
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
 
-**So….?**
+### Manual testing
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+Below is a table of manual testing carried out by myself.
 
-**Can I opt out?**
+| Feauture tested | Action     | Outcome               | Result                    |
+|-----------------|------------|-----------------------|---------------------------|
+|                 | Left click | Pop up modal          | Successfully opens modal  |
+|Modal close BTN  | Left click | Close Modal           | Successfully close modal  |
+|Start game BTN   | Left click | Start's Game          | Successfully Start's game |
+|New game BTN     | Left click | Clear's game          | Successfully Clear's game |
+|Social links     | Left click | Direct to desired link| Successfully loads link   |
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+### Validator testing 
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+- HTML files passed through w3c with no issues found, As shown below.
+![HTMLw3c](assets/documentation/html-check.PNG)
 
-**Anything more?**
+- Css files passed through w3c with 1 issue found which was a link to fontawesome, this has been corrected as shown below.
+![Csserror](assets/documentation/error-css.PNG)
+![Csscheck](assets/documentation/css-check.PNG)
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+- I used Js hint to check my JavaScript code, no errors as shown below. I did however remove all unnecassary semi colon's as it suggested and corrected a typo in my global variable.
+![JSHint](assets/documentation/js-hint.PNG)
 
----
+### Lighthouse reports
 
-Happy coding!
+
+| location | Result                                               |
+|----------|------------------------------------------------------|
+| Desktop  | ![Desktop](assets/documentation/lighthouse-desk.PNG) |
+| Mobile   | ![Mobile](assets/documentation/lighthouse-mob.PNG)   |
+
+The page has a full house on Desktop and nearly full on Mobile. 
+
+### Browsers & devices tested
+
+- I have tested the site on Chrome, FireFox, Edge & safari with no issues.
+- I tested the site accross multiple device platforms ranging from my Desktop pc to a galaxy fold (Smallest screensize availabe) with no issues or layout errors found.
+  
+### Responsiveness
+
+While working on this game, I underestimated the complexity of the task. It was only midway through the project that I began to regret my decision not to utilize bootstrap and Jquery. Although I successfully ensured the game's functionality accross various devices, I now realise that opting for libraries like Bootstrap and Jquery could have allowed me to implement a more intricate and sophisticated game.
+
+### Bugs
+
+After my final testing phases, There are no known bugs to date.
+
+## Technologies used:
+
+### languages
+
+- ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+- ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+- ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+
+### Frameworks, libraries & programs used.
+
+- Materialize - Responsive design and most of css.
+- Font Awesome - Too add icons to the page.
+- Git Pod - Too create my project
+- Git hub - To store my repository
+- Heroku - To deploy my app
+- MongoDB - To store all my information for the website
+- Am I Responsive - To view site on all devices
+- Google fonts - For the fonts MedievalSharp and Gothic
+- Balsamiq - For my wireframes
+- Snipping tool - for all my snippets for readme.
+
+## Deployment
+
+### MongoDB
+
+I chose to use [MongoDB](https://www.mongodb.com) as its non-relational database.
+
+To set up the Database URI, I followed these steps:
+- I Navigate to the Cluster(myFirstCluster) and clicked on collections.
+- I then created a new DB called Tasty Trove.
+- I set up 3 collections (Users, Recipes, Categories)
+- I Clicked on the connect button and selected connect your application
+- I copied the connection string and replaced the password with my password.
+- The connection string was then stored in my env.py file and I used it as a connection variable when deploying my App.
+
+
+### Heroku Deployment
+
+To deploy your app on [Heroku](https://www.heroku.com/platform), follow these steps:
+
+- Sign up for a Heroku account.
+- Click on the New button and select Create New App.
+- Choose a unique name for your app.
+- Select a region and click Create App. Chose the nearest region to you.
+- Choose your connection method, I chose to do automatic deployment from a GitHub repository.
+- Check your GitHub profile is visible, and search for the repository.
+- Once the repository is found, click Connect.
+- Navigate to the Settings tab and click Reveal Config Vars.
+- Then duplicate your env.py file in the Fields provided.
+- After adding all config vars, return to the Deploy tab and click Enable Automatic Deploys. Select the branch to deploy and click Deploy.
+- Once the deployment is complete, click "Open App" to view the live site.
+
+Heroku needs a requirements.txt and Procfile for the app to work.
+
+Commands to install both files are:
+
+- pip3 install -r requirements.txt
+- echo web: python app.py > Procfile
+
+After installing the requirements.txt you will need to run this command:
+- pip3 freeze --local > requirements.txt (Ensuring you are updating this file every time you install packages by running this command again)
+
+You will also need to create an env.py as follows:
+
+os.environ.setdefault("IP", "0.0.0.0")
+os.environ.setdefault("MONGO_DBNAME", "Your own value")
+os.environ.setdefault("MONGO_URI", "Your own value")
+os.environ.setdefault("PORT", "5000")
+os.environ.setdefault("SECRET_KEY", "Your own value")`
+
+### Content
+
+- [Color Hex](https://www.color-hex.com/color-palette/64222) For my color choices.
+- [Font Awesome](https://fontawesome.com/) For my icons.
+- [Google fonts](https://fonts.google.com/) For my fonts.
+
+## Media
+
+I do not hold any rights to any images displayed on this site as they are uploaded by photo URL, this site is purely educational purposes only.
+
+### People
+
+- I would like to thank my mentor [Spencer barriball](https://github.com/5pence) for His support throughout my first and second project has been immense and greatly appreciated.
+- I would like to thank my friend [Nicholas Mobey](https://www.linkedin.com/in/nicolas-mobey-79149049) for His support constantly throughout my projects pushing me on when the going gets tough and guiding me where it's neeeded.
+- I would like to thank the [CI Tutor support](https://learn.codeinstitute.net/ci_support/level5diplomainwebappdevelopment/tutor) for their ongoing support throughout my projects.
+- I would like to also take the time to thank [Code Institute](https://codeinstitute.net/) as a whole, I have faced a very difficult few months in my home life and recieved nothing but support from CI student care and for that I am very greatful.
