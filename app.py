@@ -23,7 +23,10 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/home")
 def home():
-    return render_template("home.html")
+    breakfast = mongo.db.recipes.find({"category_name": "Breakfast"})
+    lunch = mongo.db.recipes.find({"category_name": "Lunch"})
+    dinner = mongo.db.recipes.find({"category_name": "Dinner"})
+    return render_template("home.html", breakfast=breakfast, lunch=lunch, dinner=dinner)
 
 
 @app.route("/get_recipes")
@@ -224,6 +227,9 @@ def edit_recipe(recipe_id):
         flash("You are not authorized to access this recipe")
         return redirect(url_for("get_recipes"))
 
+    categories = mongo.db.categories.find()
+
+
     # Checks if form is submitted and updates the recipe with new data
     if request.method == "POST":
         update_recipe = {
@@ -239,8 +245,7 @@ def edit_recipe(recipe_id):
         flash("Your recipe has been updated")
         return redirect(url_for("get_recipes"))
 
-    categories = mongo.db.categories.find()
-    return render_template("edit_recipe.html", recipe=recipe)
+    return render_template("edit_recipe.html", recipe=recipe, categories=categories)
 
 
 # Route for delete recipe
