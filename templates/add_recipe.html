@@ -18,10 +18,10 @@
                         <label for="cuisine">Cuisine</label>
                     </div>
                     <div class="input-field col s12 m4">
-                        <select>
+                        <select id="category_name" name="category_name" class="validate" required>
                           <option value="" disabled selected>Choose your option</option>
                           {% for category in categories %}
-                          <option value="{{ category._id }}">{{ category.category_name }}</option>
+                            <option value="{{ category.category_name }}">{{ category.category_name }}</option>
                           {% endfor %}
                         </select>
                         <label>Choose category</label>

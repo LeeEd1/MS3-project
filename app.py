@@ -194,6 +194,7 @@ def add_recipe():
 
     if request.method == "POST":
         recipe = {
+            "category_name": request.form.get("category_name"),
             "recipe_name": request.form.get("recipe_name"),
             "cuisine": request.form.get("cuisine"),
             "recipe_ingredients": request.form.get("recipe_ingredients"),
