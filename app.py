@@ -205,7 +205,8 @@ def add_recipe():
         flash("Recipe successfully added")
         return redirect(url_for("get_recipes"))
 
-    return render_template("add_recipe.html")
+    categories = mongo.db.categories.find()
+    return render_template("add_recipe.html", categories=categories)
 
 
 # Route for edit recipe

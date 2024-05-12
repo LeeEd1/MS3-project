@@ -7,16 +7,25 @@
         <form class="col s12 m6 offset-m3" method="POST" action="{{ url_for('add_recipe') }}">
             <div class="card-panel">
                 <div class="row">
-                    <div class="input-field col s12 m6">
+                    <div class="input-field col s12 m4">
                         <i class="prefix fas fa-utensils"></i>
                         <input id="recipe_name" name="recipe_name" type="text" class="validate" required>
                         <label for="recipe_name">Recipe Name</label>
                     </div>
-                    <div class="input-field col s12 m6">
+                    <div class="input-field col s12 m4">
                         <i class="prefix fas fa-tags"></i>
                         <input id="cuisine" name="cuisine" type="text" class="validate" required>
                         <label for="cuisine">Cuisine</label>
                     </div>
+                    <div class="input-field col s12 m4">
+                        <select>
+                          <option value="" disabled selected>Choose your option</option>
+                          {% for category in categories %}
+                          <option value="{{ category._id }}">{{ category.category_name }}</option>
+                          {% endfor %}
+                        </select>
+                        <label>Choose category</label>
+                      </div>
                     <div class="input-field col s12">
                         <i class="prefix fas fa-list-ul"></i>
                         <input id="recipe_ingredients" name="recipe_ingredients" type="text" class="validate" required>
