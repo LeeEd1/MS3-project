@@ -227,6 +227,7 @@ def edit_recipe(recipe_id):
     # Checks if form is submitted and updates the recipe with new data
     if request.method == "POST":
         update_recipe = {
+            "category_name": request.form.get("category_name"),
             "recipe_name": request.form.get("recipe_name"),
             "cuisine": request.form.get("cuisine"),
             "recipe_ingredients": request.form.get("recipe_ingredients"),
@@ -238,8 +239,7 @@ def edit_recipe(recipe_id):
         flash("Your recipe has been updated")
         return redirect(url_for("get_recipes"))
 
-    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-    
+    categories = mongo.db.categories.find()
     return render_template("edit_recipe.html", recipe=recipe)
 
 
