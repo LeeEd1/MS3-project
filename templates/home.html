@@ -19,7 +19,7 @@
                             <div class="center-align">
                                 {% if session.user|lower == recipe.author_id|lower %}
                                 <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn-small grey darken-3">Edit</a>
-                                <a href="#modal{{ loop.index }}" class="modal-trigger waves-effect waves-light btn-small red darken-3">Delete</a>
+                                <a href="#modalB{{ loop.index }}" class="modal-trigger waves-effect waves-light btn-small red darken-3">Delete</a>
                                 {% endif %}
                             </div>
                         </div>
@@ -32,7 +32,7 @@
     <div class="row">
         {% for recipe in lunch %}
             <div class="col s12 m6 l3">
-                <div class="card medium">
+                <div class="card medium center-align">
                     <div class="card-image waves-effect waves-block waves-light cardimg">
                         <img class="activator" src="{{ recipe.photo_url }}" alt="{{ recipe.recipe_name }}">
                     </div>
@@ -46,7 +46,7 @@
                             <div class="center-align">
                                 {% if session.user|lower == recipe.author_id|lower %}
                                 <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn-small grey darken-3">Edit</a>
-                                <a href="#modal{{ loop.index }}" class="modal-trigger waves-effect waves-light btn-small red darken-3">Delete</a>
+                                <a href="#modalB{{ loop.index }}" class="modal-trigger waves-effect waves-light btn-small red darken-3">Delete</a>
                                 {% endif %}
                             </div>
                         </div>
@@ -59,7 +59,7 @@
     <div class="row">
         {% for recipe in dinner %}
             <div class="col s12 m6 l3">
-                <div class="card medium">
+                <div class="card medium center-align">
                     <div class="card-image waves-effect waves-block waves-light cardimg">
                         <img class="activator" src="{{ recipe.photo_url }}" alt="{{ recipe.recipe_name }}">
                     </div>
@@ -73,14 +73,14 @@
                             <div class="center-align">
                                 {% if session.user|lower == recipe.author_id|lower %}
                                 <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn-small grey darken-3">Edit</a>
-                                <a href="#modal{{ loop.index }}" class="modal-trigger waves-effect waves-light btn-small red darken-3">Delete</a>
+                                <a href="#modalB{{ loop.index }}" class="modal-trigger waves-effect waves-light btn-small red darken-3">Delete</a>
                                 {% endif %}
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="modal{{ loop.index }}" class="modal">
+            <div id="modalB{{ loop.index }}" class="modal">
                 <div class="modal-content">
                     <h4>Confirm Deletion</h4>
                     <p>Are you sure you want to delete this recipe?</p>
