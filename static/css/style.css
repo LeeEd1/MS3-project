@@ -6,6 +6,17 @@
     border-radius: 5px;
 }
 
+nav .brand-logo {
+    color: black;
+    font-weight: bold;
+}
+
+nav ul a {
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
 .card.medium {
     height: 320px;
     border-radius: 5%;
@@ -34,6 +45,22 @@
     font-weight: bold;
 }
 
+.social h5 {
+    font-weight: bold;
+}
+
 .socials {
     display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.socials a i {
+    font-size: 28px;
+    color: black;
+}
+
+.cp {
+    color: black;
+    font-weight: bold;
 }

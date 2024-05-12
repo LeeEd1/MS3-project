@@ -26,46 +26,46 @@
           <li><a href="{{ url_for('home') }}">Home</a></li>
           <li><a href="{{ url_for('get_recipes') }}">Recipes</a></li>
           {% if session.user %}
-            <li><a href="{{ url_for('add_recipe') }}">Add Recipes</a></li>
-            <li><a href="{{ url_for('account', username=session['user']) }}">My Account</a></li>
-              {% if session.user|lower == "admin"|lower %}
-                <li><a href="{{ url_for('get_categories') }}">Admin</a></li>
-              {% endif %}
-            <li><a href="#modal1" class="modal-trigger">Log Out</a></li>
+          <li><a href="{{ url_for('add_recipe') }}">Add Recipes</a></li>
+          <li><a href="{{ url_for('account', username=session['user']) }}">My Account</a></li>
+          {% if session.user|lower == "admin"|lower %}
+          <li><a href="{{ url_for('get_categories') }}">Admin</a></li>
+          {% endif %}
+          <li><a href="#modal1" class="modal-trigger">Log Out</a></li>
           {% else %}
-            <li><a href="{{ url_for('register') }}">Register</a></li>
-            <li><a href="{{ url_for('login') }}">Log In</a></li>
+          <li><a href="{{ url_for('register') }}">Register</a></li>
+          <li><a href="{{ url_for('login') }}">Log In</a></li>
           {% endif %}
         </ul>
       </div>
     </nav>
 
     <ul class="sidenav" id="mobile-demo">
-          <li><a href="{{ url_for('home') }}">Home</a></li>
-          <li><a href="{{ url_for('get_recipes') }}">Recipes</a></li>
-          {% if session.user %}
-            <li><a href="{{ url_for('add_recipe') }}">Add Recipes</a></li>
-            <li><a href="{{ url_for('account', username=session['user']) }}">My Account</a></li>
-              {% if session.user|lower == "admin"|lower %}
-                <li><a href="{{ url_for('get_categories') }}">Admin</a></li>
-              {% endif %}
-            <li><a href="#modal1" class="modal-trigger">Log Out</a></li>
-          {% else %}
-            <li><a href="{{ url_for('register') }}">Register</a></li>
-            <li><a href="{{ url_for('login') }}">Log In</a></li>
-          {% endif %}
+      <li><a href="{{ url_for('home') }}">Home</a></li>
+      <li><a href="{{ url_for('get_recipes') }}">Recipes</a></li>
+      {% if session.user %}
+      <li><a href="{{ url_for('add_recipe') }}">Add Recipes</a></li>
+      <li><a href="{{ url_for('account', username=session['user']) }}">My Account</a></li>
+      {% if session.user|lower == "admin"|lower %}
+      <li><a href="{{ url_for('get_categories') }}">Admin</a></li>
+      {% endif %}
+      <li><a href="#modal1" class="modal-trigger">Log Out</a></li>
+      {% else %}
+      <li><a href="{{ url_for('register') }}">Register</a></li>
+      <li><a href="{{ url_for('login') }}">Log In</a></li>
+      {% endif %}
     </ul>
   </header>
 
   <section>
     {% with messages = get_flashed_messages() %}
-      {% if messages %}
-        {% for message in messages %}
-          <div class="row flashes">
-            <h4>{{ message }}</h4>
-          </div>
-        {% endfor %}
-      {% endif %}
+    {% if messages %}
+    {% for message in messages %}
+    <div class="row flashes">
+      <h4>{{ message }}</h4>
+    </div>
+    {% endfor %}
+    {% endif %}
     {% endwith %}
   </section>
 
@@ -87,40 +87,35 @@
   <!-- footer -->
   <footer class="page-footer deep-orange accent-2">
     <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Footer Content</h5>
-          <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-        </div>
-        <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Social Media</h5>
-          <ul class="socials">
-            <li>
-              <a class="grey-text text-lighten-3" href="http://www.facebook.com" target="_blank">
-                <i class="fa-brands fa-square-facebook"></i>
-              </a>
-            </li>
-            <li>
-              <a class="grey-text text-lighten-3" href="http://www.instagram.com" target="_blank">
-                <i class="fa-brands fa-square-instagram"></i>
-              </a>
-            </li>
-            <li>
-              <a class="grey-text text-lighten-3" href="http://www.twitter.com" target="_blank"><i
-                  class="fa-brands fa-square-twitter"></i>
-              </a>
-            </li>
-            <li>
-              <a class="grey-text text-lighten-3" href="http://www.youtube.com" target="_blank">
-                <i class="fa-brands fa-square-youtube"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
+      <div class="social">
+        <h5 class="black-text center-align">Social Media</h5>
+        <ul class="socials">
+          <li>
+            <a class="grey-text text-lighten-3" href="http://www.facebook.com" target="_blank" aria-label="Facebook">
+              <i class="fa-brands fa-square-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="grey-text text-lighten-3" href="http://www.instagram.com" target="_blank" aria-label="Instagram">
+              <i class="fa-brands fa-square-instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a class="grey-text text-lighten-3" href="http://www.twitter.com" target="_blank" aria-label="Twitter"><i
+                class="fa-brands fa-square-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="grey-text text-lighten-3" href="http://www.youtube.com" target="_blank" aria-label="Youtube">
+              <i class="fa-brands fa-square-youtube"></i>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
+    </div>
     <div class="footer-copyright">
-      <div class="container">
+      <div class="container cp">
         © 2024 Copyright Lee Edwards
       </div>
     </div>
