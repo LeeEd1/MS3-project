@@ -1,13 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h1 class="center-align">Welcome to Tasty Trove!</h1>
-
-    <h2>Breakfast</h2>
+    <h2 class="center-align">Breakfast</h2>
     <div class="row">
         {% for recipe in breakfast %}
             <div class="col s12 m6 l3">
-                <div class="card medium">
+                <div class="card medium center-align">
                     <div class="card-image waves-effect waves-block waves-light cardimg">
                         <img class="activator" src="{{ recipe.photo_url }}" alt="{{ recipe.recipe_name }}">
                     </div>
@@ -30,7 +28,7 @@
             </div>
         {% endfor %}
     </div>
-    <h2>Lunch</h2>
+    <h2 class="center-align">Lunch</h2>
     <div class="row">
         {% for recipe in lunch %}
             <div class="col s12 m6 l3">
@@ -57,7 +55,7 @@
             </div>
         {% endfor %}
     </div>
-    <h2>Dinner</h2>
+    <h2 class="center-align">Dinner</h2>
     <div class="row">
         {% for recipe in dinner %}
             <div class="col s12 m6 l3">
@@ -80,6 +78,16 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div id="modal{{ loop.index }}" class="modal">
+                <div class="modal-content">
+                    <h4>Confirm Deletion</h4>
+                    <p>Are you sure you want to delete this recipe?</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="modal-close waves-effect waves-green btn-flat" >Agree</a>
+                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancel</a>
                 </div>
             </div>
         {% endfor %}
