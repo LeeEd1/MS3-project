@@ -1,6 +1,88 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h1>Welcome to Tasty Trove!</h1>
+    <h1 class="center-align">Welcome to Tasty Trove!</h1>
+
+    <h2>Breakfast</h2>
+    <div class="row">
+        {% for recipe in breakfast %}
+            <div class="col s12 m6 l3">
+                <div class="card medium">
+                    <div class="card-image waves-effect waves-block waves-light cardimg">
+                        <img class="activator" src="{{ recipe.photo_url }}" alt="{{ recipe.recipe_name }}">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">{{ recipe.recipe_name }}</span>
+                        <p><i class="fas fa-tags"></i>{{ recipe.cuisine }}</p>
+                        <div>
+                            <div class="center-align vr-button">
+                                <a href="{{ url_for('recipe_details', recipe_id=recipe._id) }}" class="waves-effect waves-light btn-small amber accent-4">View Recipe</a>
+                            </div>
+                            <div class="center-align">
+                                {% if session.user|lower == recipe.author_id|lower %}
+                                <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn-small grey darken-3">Edit</a>
+                                <a href="#modal{{ loop.index }}" class="modal-trigger waves-effect waves-light btn-small red darken-3">Delete</a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <h2>Lunch</h2>
+    <div class="row">
+        {% for recipe in lunch %}
+            <div class="col s12 m6 l3">
+                <div class="card medium">
+                    <div class="card-image waves-effect waves-block waves-light cardimg">
+                        <img class="activator" src="{{ recipe.photo_url }}" alt="{{ recipe.recipe_name }}">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">{{ recipe.recipe_name }}</span>
+                        <p><i class="fas fa-tags"></i>{{ recipe.cuisine }}</p>
+                        <div>
+                            <div class="center-align vr-button">
+                                <a href="{{ url_for('recipe_details', recipe_id=recipe._id) }}" class="waves-effect waves-light btn-small amber accent-4">View Recipe</a>
+                            </div>
+                            <div class="center-align">
+                                {% if session.user|lower == recipe.author_id|lower %}
+                                <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn-small grey darken-3">Edit</a>
+                                <a href="#modal{{ loop.index }}" class="modal-trigger waves-effect waves-light btn-small red darken-3">Delete</a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <h2>Dinner</h2>
+    <div class="row">
+        {% for recipe in dinner %}
+            <div class="col s12 m6 l3">
+                <div class="card medium">
+                    <div class="card-image waves-effect waves-block waves-light cardimg">
+                        <img class="activator" src="{{ recipe.photo_url }}" alt="{{ recipe.recipe_name }}">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">{{ recipe.recipe_name }}</span>
+                        <p><i class="fas fa-tags"></i>{{ recipe.cuisine }}</p>
+                        <div>
+                            <div class="center-align vr-button">
+                                <a href="{{ url_for('recipe_details', recipe_id=recipe._id) }}" class="waves-effect waves-light btn-small amber accent-4">View Recipe</a>
+                            </div>
+                            <div class="center-align">
+                                {% if session.user|lower == recipe.author_id|lower %}
+                                <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn-small grey darken-3">Edit</a>
+                                <a href="#modal{{ loop.index }}" class="modal-trigger waves-effect waves-light btn-small red darken-3">Delete</a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 
 {% endblock %}
