@@ -39,13 +39,13 @@ The communication of the page is designed to be easily understandable for any us
 ### Future user goals
 
 - To be able to like a recipe.
-- To be able to comment on a recipe
+- To be able to comment on a recipe.
 
 ## Design:
 
 ### Wireframes
 
-
+Please refer to [WIREFRAMES.md](WIREFRAMES.md)
 
 ### Typography
 
@@ -88,7 +88,7 @@ Below is a table of manual testing carried out by myself.
 
 | Feauture tested | Action     | Outcome               | Result                    |
 |-----------------|------------|-----------------------|---------------------------|
-|                 |   |             |     |
+|                 |   |                                |                           |
 | |  |             |     |
 |   | |  |   |
 |   |   |            |    |
