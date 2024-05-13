@@ -55,9 +55,12 @@ MedievalSharp was selected for the heading of my page with gothic selected for t
 
 My color scheme was orange black and white as shown below:
 
+![Home/Recipes Wireframes](/static/images/readme-img/colors.png)
+
 ### Images
 
 I do not hold any rights to the images that are uploaded as they are uploaded via photo URL
+and this page is for educational purposes only!
 
 ## Features
 
