@@ -92,22 +92,22 @@ def register():
 def login():
     if request.method == "POST":
         existing_user = mongo.db.users.find_one(
-            {"username": request.form.get("username").lower()})
+            {"email": request.form.get("email")})
 
         if existing_user:
             # Check if password match
             if check_password_hash(
                 existing_user["password"], request.form.get("password")):
-                    session["user"] = request.form.get("username").lower()
+                    session["user"] = existing_user["username"]
                     flash("Welcome, {}".format(
-                        request.form.get("username")))
+                        existing_user["username"]))
                     return redirect(url_for("account", username=session["user"]))
             else:
-                flash("Incorrect Email/Username and/or Password")
+                flash("Incorrect Email and/or Password")
                 return redirect(url_for("login"))
 
         else:
-            flash("Incorrect Email/Username and/or Password")
+            flash("Incorrect Email and/or Password")
             return redirect(url_for("login"))
 
     return render_template("login.html")
