@@ -228,7 +228,8 @@ def edit_recipe(recipe_id):
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
 
-    if recipe is None or recipe.get('author_id') != session["user"]:
+    if recipe is None or recipe.get(
+        'author_id') != session["user"] and session["user"] != "admin":
         flash("You are not authorized to access this recipe")
         return redirect(url_for("get_recipes"))
 
@@ -262,7 +263,8 @@ def delete_recipe(recipe_id):
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
 
-    if recipe is None or recipe.get('author_id') != session["user"]:
+    if recipe is None or recipe.get(
+        'author_id') != session["user"] and session["user"] != "admin":
         flash("You are not authorized to access this recipe")
         return redirect(url_for("get_recipes"))
 
