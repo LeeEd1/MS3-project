@@ -68,16 +68,11 @@ I do not hold any rights to the images that are uploaded as they are uploaded vi
 
 ### Game board
 
-Once the user clicks start game the game board is revealed and the timer starts the countdown. 
-![here](assets/documentation/game-board.PNG)
+
 
 ### Modals
 
-![Here](assets/documentation/modal-instructions.PNG)
-![Here](assets/documentation/win-modal.PNG) 
-![Here](assets/documentation/game-over.PNG)
 
-Above are 3 modals the player will see in their journey through the game. The first is the instructions modal which pops up when the player clicks How to play, The second is the win modal which pops up if the player is successful, The third is the game over modal.
 
 ### Footer
 
@@ -93,33 +88,22 @@ Below is a table of manual testing carried out by myself.
 
 | Feauture tested | Action     | Outcome               | Result                    |
 |-----------------|------------|-----------------------|---------------------------|
-|                 | Left click | Pop up modal          | Successfully opens modal  |
-|Modal close BTN  | Left click | Close Modal           | Successfully close modal  |
-|Start game BTN   | Left click | Start's Game          | Successfully Start's game |
-|New game BTN     | Left click | Clear's game          | Successfully Clear's game |
-|Social links     | Left click | Direct to desired link| Successfully loads link   |
+|                 |   |             |     |
+| |  |             |     |
+|   | |  |   |
+|   |   |            |    |
+|     |   |    |      |
 
 ### Validator testing 
 
-- HTML files passed through w3c with no issues found, As shown below.
-![HTMLw3c](assets/documentation/html-check.PNG)
 
-- Css files passed through w3c with 1 issue found which was a link to fontawesome, this has been corrected as shown below.
-![Csserror](assets/documentation/error-css.PNG)
-![Csscheck](assets/documentation/css-check.PNG)
-
-- I used Js hint to check my JavaScript code, no errors as shown below. I did however remove all unnecassary semi colon's as it suggested and corrected a typo in my global variable.
-![JSHint](assets/documentation/js-hint.PNG)
 
 ### Lighthouse reports
 
 
-| location | Result                                               |
-|----------|------------------------------------------------------|
-| Desktop  | ![Desktop](assets/documentation/lighthouse-desk.PNG) |
-| Mobile   | ![Mobile](assets/documentation/lighthouse-mob.PNG)   |
 
-The page has a full house on Desktop and nearly full on Mobile. 
+
+ 
 
 ### Browsers & devices tested
 
@@ -128,11 +112,10 @@ The page has a full house on Desktop and nearly full on Mobile.
   
 ### Responsiveness
 
-While working on this game, I underestimated the complexity of the task. It was only midway through the project that I began to regret my decision not to utilize bootstrap and Jquery. Although I successfully ensured the game's functionality accross various devices, I now realise that opting for libraries like Bootstrap and Jquery could have allowed me to implement a more intricate and sophisticated game.
 
 ### Bugs
 
-After my final testing phases, There are no known bugs to date.
+
 
 ## Technologies used:
 
