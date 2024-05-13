@@ -41,6 +41,11 @@ The communication of the page is designed to be easily understandable for any us
 - To be able to like a recipe.
 - To be able to comment on a recipe.
 
+### Admin user
+
+- As an admin I want to be able to Edit or Delete any recipe.
+- Add or Remove any category
+
 ## Design:
 
 ### Wireframes
