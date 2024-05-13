@@ -10,8 +10,8 @@
                         <img class="activator" src="{{ recipe.photo_url }}" alt="{{ recipe.recipe_name }}">
                     </div>
                     <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">{{ recipe.recipe_name }}</span>
-                        <p><i class="fas fa-tags"></i>{{ recipe.cuisine }}</p>
+                        <span class="card-title activator grey-text text-darken-4"><strong>{{ recipe.recipe_name }}</strong></span>
+                        <p><i class="fas fa-tags"></i><strong>{{ recipe.cuisine }} | {{ recipe.category_name }}</strong></p>
                         <div>
                             <div class="center-align vr-button">
                                 <a href="{{ url_for('recipe_details', recipe_id=recipe._id) }}" class="waves-effect waves-light btn-small amber accent-4">View Recipe</a>
@@ -37,8 +37,8 @@
                         <img class="activator" src="{{ recipe.photo_url }}" alt="{{ recipe.recipe_name }}">
                     </div>
                     <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">{{ recipe.recipe_name }}</span>
-                        <p><i class="fas fa-tags"></i>{{ recipe.cuisine }}</p>
+                        <span class="card-title activator grey-text text-darken-4"><strong>{{ recipe.recipe_name }}</strong></span>
+                        <p><i class="fas fa-tags"></i><strong>{{ recipe.cuisine }} | {{ recipe.category_name }}</strong></p>
                         <div>
                             <div class="center-align vr-button">
                                 <a href="{{ url_for('recipe_details', recipe_id=recipe._id) }}" class="waves-effect waves-light btn-small amber accent-4">View Recipe</a>
@@ -64,8 +64,8 @@
                         <img class="activator" src="{{ recipe.photo_url }}" alt="{{ recipe.recipe_name }}">
                     </div>
                     <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">{{ recipe.recipe_name }}</span>
-                        <p><i class="fas fa-tags"></i>{{ recipe.cuisine }}</p>
+                        <span class="card-title activator grey-text text-darken-4"><strong>{{ recipe.recipe_name }}</strong></span>
+                        <p><i class="fas fa-tags"></i><strong>{{ recipe.cuisine }} | {{ recipe.category_name }}</strong></p>
                         <div>
                             <div class="center-align vr-button">
                                 <a href="{{ url_for('recipe_details', recipe_id=recipe._id) }}" class="waves-effect waves-light btn-small amber accent-4">View Recipe</a>
