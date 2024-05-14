@@ -17,7 +17,7 @@
                                 <a href="{{ url_for('recipe_details', recipe_id=recipe._id) }}" class="waves-effect waves-light btn-small amber accent-4">View Recipe</a>
                             </div>
                             <div class="center-align">
-                                {% if session.user|lower == recipe.author_id|lower %}
+                                {% if session.user|lower == recipe.author_id|lower or session.user|lower == 'admin' %}
                                 <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn-small grey darken-3">Edit</a>
                                 <a href="#modalB{{ loop.index }}" class="modal-trigger waves-effect waves-light btn-small red darken-3">Delete</a>
                                 {% endif %}
@@ -44,7 +44,7 @@
                                 <a href="{{ url_for('recipe_details', recipe_id=recipe._id) }}" class="waves-effect waves-light btn-small amber accent-4">View Recipe</a>
                             </div>
                             <div class="center-align">
-                                {% if session.user|lower == recipe.author_id|lower %}
+                                {% if session.user|lower == recipe.author_id|lower  or session.user|lower == 'admin' %}
                                 <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn-small grey darken-3">Edit</a>
                                 <a href="#modalB{{ loop.index }}" class="modal-trigger waves-effect waves-light btn-small red darken-3">Delete</a>
                                 {% endif %}
