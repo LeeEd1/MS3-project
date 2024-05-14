@@ -20,21 +20,26 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+# Route for home
 @app.route("/")
 @app.route("/home")
 def home():
+    # Retrieves categories from DB
     breakfast = mongo.db.recipes.find({"category_name": "Breakfast"})
     lunch = mongo.db.recipes.find({"category_name": "Lunch"})
     dinner = mongo.db.recipes.find({"category_name": "Dinner"})
+
     return render_template("home.html", breakfast=breakfast, lunch=lunch, dinner=dinner)
 
 
+# Route for get_recipes
 @app.route("/get_recipes")
 def get_recipes():
     recipes = mongo.db.recipes.find()
     return render_template("recipes.html", recipes=recipes)
 
 
+# Route for recipe_details
 @app.route("/recipe/<recipe_id>")
 def recipe_details(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
@@ -128,17 +133,19 @@ def delete_user(user_id):
 # Route for user's account page
 @app.route("/account/<username>", methods=["GET", "POST"])
 def account(username):
+    # Check if user is logged in
     if "user" not in session:
         flash("Please log in to see this page")
         return redirect(url_for("login"))
 
+    # Check if user has permission to view page
     if session["user"] != username:
         flash("You do not have permission to view this page.")
         return redirect(url_for("home"))
 
 
     user = mongo.db.users.find_one({"username": username})
-
+    # Checks if user has account
     if user is None:
         flash("Sorry your account could not be found!")
         return redirect(url_for("home"))
@@ -227,7 +234,7 @@ def edit_recipe(recipe_id):
         return redirect(url_for("login"))
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-
+    # Checks if recipe exist and if author match or admin 
     if recipe is None or recipe.get(
         'author_id') != session["user"] and session["user"] != "admin":
         flash("You are not authorized to access this recipe")
@@ -257,12 +264,13 @@ def edit_recipe(recipe_id):
 # Route for delete recipe
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
+    # Checks if user is in session
     if "user" not in session:
         flash("Please log in or register to see this page")
         return redirect(url_for("login"))
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-
+    # Checks if recipe exist and if author match or admin
     if recipe is None or recipe.get(
         'author_id') != session["user"] and session["user"] != "admin":
         flash("You are not authorized to access this recipe")
@@ -276,10 +284,11 @@ def delete_recipe(recipe_id):
 # Route for admin page to add remove categories
 @app.route("/get_categories")
 def get_categories():
+    # Checks if user in session
     if "user" not in session:
         flash("Please log in to access this page")
         return redirect(url_for("login"))
-
+    # Checks if user  is admin
     if session.get("user") != "admin":
         flash("You do not have permission to view this page.")
         return redirect(url_for("home"))
@@ -291,10 +300,11 @@ def get_categories():
 # Route for Add Category
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
+    # Checks if user in session
     if "user" not in session:
         flash("Please log in to access this page")
         return redirect(url_for("login"))
-
+    # Checks if user is admin
     if session.get("user") != "admin":
         flash("You do not have permission to view this page.")
         return redirect(url_for("home"))
@@ -313,10 +323,11 @@ def add_category():
 # Route for Edit Category
 @app.route("/edit_category/<category_id>", methods=["GET", "POST"])
 def edit_category(category_id):
+    # Check if user is in session
     if "user" not in session:
         flash("Please log in to access this page")
         return redirect(url_for("login"))
-
+    # Check if user is admin
     if session.get("user") != "admin":
         flash("You do not have permission to view this page.")
         return redirect(url_for("home"))
