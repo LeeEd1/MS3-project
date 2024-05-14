@@ -4,7 +4,7 @@
     <h2 class="center-align">Breakfast</h2>
     <div class="row">
         {% for recipe in breakfast %}
-            <div class="col s12 m6 l3">
+            <div class="col s12 m6 l3 xl3">
                 <div class="card medium center-align">
                     <div class="card-image waves-effect waves-block waves-light cardimg">
                         <img class="activator" src="{{ recipe.photo_url }}" alt="{{ recipe.recipe_name }}">
@@ -31,7 +31,7 @@
     <h2 class="center-align">Lunch</h2>
     <div class="row">
         {% for recipe in lunch %}
-            <div class="col s12 m6 l3">
+            <div class="col s12 m6 l3 xl3">
                 <div class="card medium center-align">
                     <div class="card-image waves-effect waves-block waves-light cardimg">
                         <img class="activator" src="{{ recipe.photo_url }}" alt="{{ recipe.recipe_name }}">
@@ -58,7 +58,7 @@
     <h2 class="center-align">Dinner</h2>
     <div class="row">
         {% for recipe in dinner %}
-            <div class="col s12 m6 l3">
+            <div class="col s12 m6 l4 xl3">
                 <div class="card medium center-align">
                     <div class="card-image waves-effect waves-block waves-light cardimg">
                         <img class="activator" src="{{ recipe.photo_url }}" alt="{{ recipe.recipe_name }}">
