@@ -26,6 +26,14 @@ nav ul a {
     border-radius: 5%;
 }
 
+.card-medium span {
+    font-size: 30px;
+}
+
+.card.medium p {
+    font-size: 20px;
+}
+
 .card.medium .card-image+.card-content {
     max-height: 50%;
 }
