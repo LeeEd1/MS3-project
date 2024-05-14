@@ -3,6 +3,7 @@
 
     <h3 class="center-align">Manage Category</h3>
 
+    <!-- Add category button -->
     <div class="row">
         <div class="col s12 center-align">
             <a href="{{ url_for('add_category') }}" class="btn-large deep-orange accent-1 black-text">
@@ -11,6 +12,7 @@
         </div>
     </div>
 
+    <!-- Categories -->
     <div class="row">
         {% for category in categories %}
             <div class="col s12 m4">
@@ -26,6 +28,7 @@
                     </div>
                 </div>
             </div>
+            <!-- Modal for delete category -->
             <div id="modalC{{ loop.index }}" class="modal">
                 <div class="modal-content">
                     <h4>Confirm Deletion</h4>

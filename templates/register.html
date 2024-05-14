@@ -1,11 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
 
-
+    <!-- Register form -->
     <div class="row">
         <form class="col s12 m6 offset-m3" method="POST" action="{{ url_for('register') }}">
             <div class="card-panel">
                 <div class="row">
+                    <!-- Email field -->
                     <div class="input-field col s12">
                         <i class="fas fa-envelope prefix"></i>
                         <input id="email" name="email" type="email" minlength="5" maxlength="50" class="validate" required>
@@ -13,22 +14,26 @@
                     </div>
                 </div>
                 <div class="row">
+                    <!-- First name -->
                     <div class="input-field col s6">
                         <i class="fas fa-user prefix"></i>
                         <input id="first_name" name="first_name" type="text" minlength="2" maxlength="20" class="validate" required>
                         <label for="first_name">First Name</label>
                     </div>
+                    <!-- Last name -->
                     <div class="input-field col s6">
                         <input id="last_name" name="last_name" type="text" minlength="2" maxlength="20" class="validate" required>
                         <label for="last_name">Last Name</label>
                     </div>
                 </div>
                 <div class="row">
+                    <!-- Username -->
                     <div class="input-field col s6">
                         <i class="fas fa-user-plus prefix"></i>
                         <input id="username" name="username" type="text" minlength="5" maxlength="15" class="validate" required>
                         <label for="username">Username</label>
                     </div>
+                    <!-- Fav cuisine -->
                     <div class="input-field col s6">
                         <i class="fas fa-user-plus prefix"></i>
                         <input id="fav_cuisine" name="fav_cuisine" type="text" minlength="5" maxlength="15" class="validate" required>
@@ -36,6 +41,7 @@
                     </div>
                 </div>
                 <div class="row">
+                    <!-- Password field -->
                     <div class="input-field col s12">
                         <i class="fas fa-user-lock prefix"></i>
                         <input id="password" name="password" type="password" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9!@#$%^&*()_+]{5,15}$" class="validate" required>
@@ -43,6 +49,7 @@
                     </div>
                 </div>
                 <div class="row">
+                    <!-- Confirm field -->
                     <div class="input-field col s12">
                         <i class="fas fa-user-lock prefix"></i>
                         <input id="confirm" name="confirm" type="password" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9!@#$%^&*()_+]{5,15}$" class="validate" required>
@@ -51,6 +58,7 @@
                 </div>
                 <div class="row">
                     <div>
+                        <!-- Register button -->
                         <button type="submit" class="col s6 offset-s3 btn-large deep-orange accent-2">
                             register <i class="fas fa-sign-in-alt"></i>
                         </button>

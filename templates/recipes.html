@@ -2,10 +2,11 @@
 {% block content %}
 
     <h3 class="center-align">Recipes</h3>
-
+    <!-- Recipies section -->
     <div class="row">
         {% for recipe in recipes %}
                 <div class="col s12 m6 l4 xl3">
+                    <!-- Recipe card -->
                     <div class="card medium z-depth-3">
                         <div class="card-image waves-effect waves-block waves-light cardimg">
                             <img class="activator" src="{{ recipe.photo_url }}" alt="{{ recipe.recipe_name }}">
@@ -27,6 +28,7 @@
                         </div>
                     </div>
                 </div>
+                    <!-- Delete modal -->
                     <div id="modalA{{ loop.index }}" class="modal">
                         <div class="modal-content">
                             <h4>Confirm Deletion</h4>

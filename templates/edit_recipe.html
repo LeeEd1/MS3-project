@@ -2,21 +2,24 @@
 {% block content %}
 
     <h3 class="center-align">Edit Recipe</h3>
-
+    <!-- Edit recipe -->
     <div class="row">
         <form class="col s12 m6 offset-m3" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
             <div class="card-panel">
                 <div class="row">
+                    <!-- Recipe name -->
                     <div class="input-field col s12 m4">
                         <i class="prefix fas fa-utensils"></i>
                         <input id="recipe_name" name="recipe_name" type="text" class="validate" required value="{{ recipe.recipe_name }}">
                         <label for="recipe_name">Recipe Name</label>
                     </div>
+                    <!-- Recipe cuisine -->
                     <div class="input-field col s12 m4">
                         <i class="prefix fas fa-tags"></i>
                         <input id="cuisine" name="cuisine" type="text" class="validate" required value="{{ recipe.cuisine }}">
                         <label for="cuisine">Cuisine</label>
                     </div>
+                    <!-- Category selection -->
                     <div class="input-field col s12 m4">
                         <select id="category_name" name="category_name" class="validate" required>
                             <option value="" disabled selected>Choose your option</option>
@@ -30,21 +33,25 @@
                         </select>
                         <label>Choose category</label>
                     </div>
+                    <!-- Ingredients -->
                     <div class="input-field col s12">
                         <i class="prefix fas fa-list-ul"></i>
                         <input id="recipe_ingredients" name="recipe_ingredients" type="text" class="validate" required value="{{ recipe.recipe_ingredients }}">
                         <label for="recipe_ingredients">Ingredients</label>
                     </div>
+                    <!-- Instructions field -->
                     <div class="input-field col s12">
                         <i class="prefix fas fa-book"></i>
                         <textarea id="recipe_instructions" name="recipe_instructions" class="materialize-textarea validate" required>{{ recipe.recipe_instructions }}</textarea>
                         <label for="recipe_instructions">Instructions</label>
                     </div>
+                    <!-- Photo field -->
                     <div class="input-field col s12">
                         <i class="prefix fas fa-link"></i>
                         <input id="photo_url" name="photo_url" type="text" class="validate" required value="{{ recipe.photo_url }}">
                         <label for="photo_url">Photo URL</label>
                     </div>
+                    <!-- Edit recipe button -->
                     <div class="input-field col s12">
                         <button class="btn waves-effect waves-dark deep-orange accent-2" type="submit" name="action" required>
                             Edit Recipe
