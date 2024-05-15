@@ -3,7 +3,7 @@
 
     <!-- Register form -->
     <div class="row">
-        <form class="col s12 m6 offset-m3" method="POST" action="{{ url_for('register') }}">
+        <form class="col s12 m8 offset-m2 l6 offset-l3" method="POST" action="{{ url_for('register') }}">
             <div class="card-panel">
                 <div class="row">
                     <!-- Email field -->
@@ -28,13 +28,13 @@
                 </div>
                 <div class="row">
                     <!-- Username -->
-                    <div class="input-field col s6">
+                    <div class="input-field col s12">
                         <i class="fas fa-user-plus prefix"></i>
                         <input id="username" name="username" type="text" minlength="5" maxlength="15" class="validate" required>
                         <label for="username">Username</label>
                     </div>
                     <!-- Fav cuisine -->
-                    <div class="input-field col s6">
+                    <div class="input-field col s12">
                         <i class="fas fa-user-plus prefix"></i>
                         <input id="fav_cuisine" name="fav_cuisine" type="text" minlength="5" maxlength="15" class="validate" required>
                         <label for="fav_cuisine">Favourite Cuisine</label>
