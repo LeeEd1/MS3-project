@@ -1,6 +1,6 @@
 # Tasty Trove
 
-![Site accross devices]()
+![Site accross devices](/static/images/readme-img/amiresponsive.png)
 Tasty Trove was founded with the intention of fostering a community where food enthusiasts can freely share their favorite recipes, gain culinary inspiration, and explore diverse cuisines. Our platform encourages users to connect with like-minded individuals, discover new flavors, and embark on culinary adventures together.
 
 ## UX:
@@ -69,22 +69,51 @@ and this page is for educational purposes only!
 
 ## Features
 
-### Landing Page
+### Landing Page:
+
+![Landing page](/static/images/readme-img/landing-page.png)
+Above is the landing page the new/registered user will see which features a full navbar to browse accessible pages and if a new user the necessary links to register if interested.
 
 
+### Recipes page:
 
+![Recipes page](/static/images/readme-img/recipes.png)
+Above is the recipes page new/existing user will see.
 
-### Game board
+### Register page:
+
+![Register page](/static/images/readme-img/register.png)
+Above is the register page for the user to join if interested.
+
+### Add recipe page:
+
+![Add recipe page](/static/images/readme-img/add-recipe.png)
+Above is the Add recipe page for registered users.
+
+### Account page:
+
+![Account page](/static/images/readme-img/account-page.png)
+Above is the account page where the user can view/edit their details.
+
+### Admin page:
+
+![Admin page](/static/images/readme-img/admin-page.png)
+Above is the admin page which is only accessible to the user Admin.
+
+### Nav bar:
+
+![Navbar](/static/images/readme-img/nav-bar.png)
+Above is the navbar featured on all pages, however the admin tab is only accessible if your admin. This collapses on smaller devices.
+
+### Footer:
+
+![Footer](/static/images/readme-img/footer.png)
+The page is also equipped with a footer with social icons for more viewing pleaure.
 
 
 
 ### Modals
 
-
-
-### Footer
-
-I have also added social media links along with youtube for more viewing pleasure.
 
 ## Testing:
 
