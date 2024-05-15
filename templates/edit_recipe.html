@@ -4,23 +4,23 @@
     <h3 class="center-align">Edit Recipe</h3>
     <!-- Edit recipe -->
     <div class="row">
-        <form class="col s12 m6 offset-m3" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
+        <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
             <div class="card-panel">
                 <div class="row">
                     <!-- Recipe name -->
-                    <div class="input-field col s12 m4">
+                    <div class="input-field col s12 m12">
                         <i class="prefix fas fa-utensils"></i>
                         <input id="recipe_name" name="recipe_name" type="text" class="validate" required value="{{ recipe.recipe_name }}">
                         <label for="recipe_name">Recipe Name</label>
                     </div>
                     <!-- Recipe cuisine -->
-                    <div class="input-field col s12 m4">
+                    <div class="input-field col s12 m6">
                         <i class="prefix fas fa-tags"></i>
                         <input id="cuisine" name="cuisine" type="text" class="validate" required value="{{ recipe.cuisine }}">
                         <label for="cuisine">Cuisine</label>
                     </div>
                     <!-- Category selection -->
-                    <div class="input-field col s12 m4">
+                    <div class="input-field col s12 m6">
                         <select id="category_name" name="category_name" class="validate" required>
                             <option value="" disabled selected>Choose your option</option>
                             {% for category in categories %}
