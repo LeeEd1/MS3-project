@@ -2,6 +2,23 @@
 {% block content %}
 
     <h3 class="center-align">Recipes</h3>
+
+    <div class="row">
+        <div class="col s12 m6 offset-m3">
+            <form action="{{ url_for('get_recipes') }}" method="GET">
+                <div class="input-field">
+                    <select name="category_name" onchange="this.form.submit()">
+                        <option value="" disabled selected>Filter by Category</option>
+                        <option value="">All Categories</option>
+                        {% for category in categories %}
+                        <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <!-- Recipies section -->
     <div class="row">
         {% for recipe in recipes %}

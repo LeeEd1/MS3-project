@@ -35,8 +35,20 @@ def home():
 # Route for get_recipes
 @app.route("/get_recipes")
 def get_recipes():
-    recipes = mongo.db.recipes.find()
-    return render_template("recipes.html", recipes=recipes)
+    # Gets queries
+    filter_category = request.args.get('category_name')
+
+    # Queries database and retrieves recipes that match query
+    if filter_category:
+        recipes = mongo.db.recipes.find({"category_name": filter_category})
+    else:
+        # retrieve all recipes if no filter specified
+        recipes = mongo.db.recipes.find()
+    
+    # Fetch categories
+    categories = mongo.db.categories.find()
+
+    return render_template("recipes.html", recipes=recipes, categories=categories)
 
 
 # Route for recipe_details
