@@ -71,34 +71,40 @@ and this page is for educational purposes only!
 
 ### Landing Page:
 
-![Landing page](/static/images/readme-img/)
+![Landing page](/static/images/readme-img/landing-page.png)
 Above is the landing page the new/registered user will see which features a full navbar to browse accessible pages and if a new user the necessary links to register if interested.
 
 
 ### Recipes page:
 
-![Recipes page](/static/images/readme-img/)
-Above is the recipes page new/existing user will see.
+![Recipes page](/static/images/readme-img/recipes-newuser.png)
+Above is the recipes page new user will see.
+
+![Recipes page](/static/images/readme-img/recipes-user.png)
+Above is the recipes page existing user will see which features a different nav bar and edit/delete if you own the recipe.
 
 ### Register page:
 
-![Register page](/static/images/readme-img/)
+![Register page](/static/images/readme-img/register.png)
 Above is the register page for the user to join if interested.
 
 ### Add recipe page:
 
-![Add recipe page](/static/images/readme-img/)
+![Add recipe page](/static/images/readme-img/add-recipe.png)
 Above is the Add recipe page for registered users.
 
 ### Account page:
 
-![Account page](/static/images/readme-img/account-page.png)
+![Account page](/static/images/readme-img/account.png)
 Above is the account page where the user can view/edit their details.
 
 ### Admin page:
 
-![Admin page](/static/images/readme-img/admin-page.png)
+![Admin page](/static/images/readme-img/admin.png)
 Above is the admin page which is only accessible to the user Admin.
+
+![Admin page](/static/images/readme-img/admin-add.png)
+Above is the Add category form which is only accessible to the user Admin.
 
 ### Nav bar:
 
