@@ -71,23 +71,23 @@ and this page is for educational purposes only!
 
 ### Landing Page:
 
-![Landing page](/static/images/readme-img/landing-page.png)
+![Landing page](/static/images/readme-img/)
 Above is the landing page the new/registered user will see which features a full navbar to browse accessible pages and if a new user the necessary links to register if interested.
 
 
 ### Recipes page:
 
-![Recipes page](/static/images/readme-img/recipes.png)
+![Recipes page](/static/images/readme-img/)
 Above is the recipes page new/existing user will see.
 
 ### Register page:
 
-![Register page](/static/images/readme-img/register.png)
+![Register page](/static/images/readme-img/)
 Above is the register page for the user to join if interested.
 
 ### Add recipe page:
 
-![Add recipe page](/static/images/readme-img/add-recipe.png)
+![Add recipe page](/static/images/readme-img/)
 Above is the Add recipe page for registered users.
 
 ### Account page:
