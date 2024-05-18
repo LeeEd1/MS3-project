@@ -67,6 +67,10 @@ My color scheme was orange black and white as shown below:
 I do not hold any rights to the images that are uploaded as they are uploaded via photo URL
 and this page is for educational purposes only!
 
+### Responsiveness
+
+While creating my page I fully utilized [Materialize Css](https://materializecss.com/) for my responsive design. 
+
 ## Features
 
 ### Landing Page:
@@ -108,8 +112,10 @@ Above is the Add category form which is only accessible to the user Admin.
 
 ### Nav bar:
 
+![Navbar](/static/images/readme-img/new-nav.png)
+
 ![Navbar](/static/images/readme-img/nav-bar.png)
-Above is the navbar featured on all pages, however the admin tab is only accessible if your admin. This collapses on smaller devices.
+Above is the navbar existing user will see, however the admin tab is only accessible if your admin. This collapses on smaller devices.
 
 ### Footer:
 
@@ -123,39 +129,6 @@ Modal example, there are 3 in total which are delete recipe/delete account or de
 
 
 ## Testing:
-
-
-
-### Manual testing
-
-Below is a table of manual testing carried out by myself.
-
-| Feauture tested | Action     | Outcome               | Result                    |
-|-----------------|------------|-----------------------|---------------------------|
-|                 |   |                                |                           |
-| |  |             |     |
-|   | |  |   |
-|   |   |            |    |
-|     |   |    |      |
-
-### Validator testing 
-
-
-
-### Lighthouse reports
-
-
-
-
- 
-
-### Browsers & devices tested
-
-- I have tested the site on Chrome, FireFox, Edge & safari with no issues.
-- I tested the site accross multiple device platforms ranging from my Desktop pc to a galaxy fold (Smallest screensize availabe) with no issues or layout errors found.
-  
-### Responsiveness
-
 
 ### Bugs
 
