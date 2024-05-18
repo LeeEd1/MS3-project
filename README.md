@@ -44,7 +44,7 @@ The communication of the page is designed to be easily understandable for any us
 ### Admin user
 
 - As an admin I want to be able to Edit or Delete any recipe.
-- Add or Remove any category
+- Add or Remove any category.
 
 ## Design:
 
@@ -113,6 +113,7 @@ Above is the Add category form which is only accessible to the user Admin.
 ### Nav bar:
 
 ![Navbar](/static/images/readme-img/new-nav.png)
+Above is the navbar new users will see. New users will be able to browse recipes then register if interested.
 
 ![Navbar](/static/images/readme-img/nav-bar.png)
 Above is the navbar existing user will see, however the admin tab is only accessible if your admin. This collapses on smaller devices.
@@ -130,8 +131,11 @@ Modal example, there are 3 in total which are delete recipe/delete account or de
 
 ## Testing:
 
+Please refer to [TESTING.md](TESTING.md)
+
 ### Bugs
 
+While creating Treasure trove I was continuously using dev tools throughout to check for design issues/bugs and corrected them as I found them. To my knowlege there are no known bugs to date.
 
 
 ## Technologies used:
@@ -140,7 +144,8 @@ Modal example, there are 3 in total which are delete recipe/delete account or de
 
 - ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 - ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
-- ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+- ![Jquery](https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white)
+- ![PYTHON](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
 ### Frameworks, libraries & programs used.
 
