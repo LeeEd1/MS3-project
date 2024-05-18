@@ -132,8 +132,22 @@ I knew the issue was through the library however I used direct input just for pi
 ![admin-desk](/static/images/test-img/admin-lh.png)
 ![admin-mob](/static/images/test-img/admin-mob.png)
 
+After going through my lighthouse tests I came accross a few issues mostly minor things like buttons and contrast which I have corrected to improve the scores.
 
- 
+I also had an issue with the contrast on my forms where by the text was not sufficient for all readers so I applied a global style rule to change the text to a darker colour on all forms to combat this issue as shown below.
+
+label {
+    color: rgb(77, 75, 75) !important;
+}
+
+After testing the recipes page on lighthouse I found that there was a significant drop in the scores on mobile mainly due to the way the images are being uploaded(By URL) as they can vary in size which I have no control over, To combat this issue I googled [This](https://www.google.com/search?q=how+can+i+improve+light+house+score+with+images+uploaded+by+url&sca_esv=aabad935989ed720&sca_upv=1&ei=mqdIZuezHrP97_UPvsiz2Ao&ved=0ahUKEwjn6LT7oZeGAxWz_rsIHT7kDKsQ4dUDCBA&uact=5&oq=how+can+i+improve+light+house+score+with+images+uploaded+by+url&gs_lp=Egxnd3Mtd2l6LXNlcnAiP2hvdyBjYW4gaSBpbXByb3ZlIGxpZ2h0IGhvdXNlIHNjb3JlIHdpdGggaW1hZ2VzIHVwbG9hZGVkIGJ5IHVybEjAkQFQAFjBjwFwB3gBkAEBmAHeAaAB4CqqAQY2OC4xLjG4AQPIAQD4AQGYAkSgAucnqAITwgIKEAAYgAQYQxiKBcICEBAAGIAEGLEDGEMYgwEYigXCAggQABiABBixA8ICCxAAGIAEGLEDGIMBwgIOEC4YgAQYsQMY0QMYxwHCAhEQLhiABBixAxjRAxiDARjHAcICDhAuGIAEGLEDGIMBGIoFwgIdEAAYgAQYtAIY1AMY5QIYtwMYigUY6gIYigPYAQHCAhYQABgDGLQCGOUCGOoCGIwDGI8B2AECwgIWEC4YAxi0AhjlAhjqAhiMAxiPAdgBAsICCxAAGIAEGJECGIoFwgILEC4YgAQYkQIYigXCAgUQABiABMICCxAuGIAEGNEDGMcBwgILEAAYgAQYsQMYigXCAhEQLhiABBixAxiDARjUAhiKBcICDhAAGIAEGLEDGIMBGIoFwgILEC4YgAQYsQMY1ALCAgQQABgDwgIIEC4YgAQYsQPCAgYQABgWGB7CAggQABgWGB4YD8ICCxAAGIAEGIYDGIoFwgIIEAAYgAQYogTCAgUQIRigAcICBRAhGJ8FwgIEECEYFcICBxAhGKABGArCAgYQIRgVGAqYAwW6BgQIARgHugYGCAIQARgKkgcGNjUuMi4xoAfipAM&sclient=gws-wiz-serp) and checked out the list provided which I ended up using loading="lazy" and this corrected my issue on mobile devices. This rule defers the loading of an image that is not needed on the page immediately.
+
+Wile doing lighthouse tests I picked up the side nav trigger issue "Links do not have a discernible name". To combat this issue I used the same approach I used with the social icons which I picked up back in project one when I had the same issue by using an aria-label.
+
+### CI python linter:
+
+![Python linter](/static/images/test-img/linter-result.png)
+Above is the CI python linter score. I had quite a few errors to correct mainly white space and trailing white space, all errors have been fixed and is fully pep8 compliant.
 
 ### Browsers & devices tested
 
