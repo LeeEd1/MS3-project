@@ -149,6 +149,11 @@ Wile doing lighthouse tests I picked up the side nav trigger issue "Links do not
 ![Python linter](/static/images/test-img/linter-result.png)
 Above is the CI python linter score. I had quite a few errors to correct mainly white space and trailing white space, all errors have been fixed and is fully pep8 compliant.
 
+### JS Hint:
+
+![Jshint](/static/images/test-img/js-hint.png)
+I passed my file through js hint, the file only contains Jquery code and shows no erros however it states $ is undefined which is not an issue because it's related to jquery.
+
 ### Browsers & devices tested
 
 - I have tested the site on Chrome, FireFox, Edge & safari with no issues.
