@@ -66,10 +66,15 @@ Below are tables of manual testing carried out by myself.
 
 ### Validator testing:
 
-HTML check:
+#### HTML:
 ![Html-error](/static/images/test-img/html-error.png)
 
-I had one error when checking html code through [w3c](https://validator.w3.org/)
+I had one error when checking html code through [w3c](https://validator.w3.org/). This was due to a stray div in one of my templates, to find this issue I right clicked the page and then clicked view page source to locate the stray div to see the surrounding code then I was able to see which template this was in.
+
+HTML Correction:
+![HTML-correct](/static/images/test-img/html-check.png)
+
+C
 
 
 
