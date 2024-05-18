@@ -82,7 +82,7 @@ CSS error:
 ![CSS-error](/static/images/test-img/css-error.png)
 
 CSS Input check:
-![CSS-error](/static/images/test-img/css-error.png)
+![CSS-error](/static/images/test-img/css-manual.png)
 
 I had 1 error when checking CSS code through [w3c](https://jigsaw.w3.org/css-validator/). This is due to the materialize library I am using, I tried to correct this issue with a manual CSS rule but this was unsuccessful. Due to my time constraints I didn't investigate this any further and removed the style rule.
 
