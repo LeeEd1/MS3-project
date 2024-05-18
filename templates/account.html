@@ -15,8 +15,8 @@
                         <p><strong>Date Joined:</strong> {{ user.date_joined.strftime('%Y-%m-%d') }}</p>
                     </div>
                     <!-- edit/delete buttons -->
-                    <div class="center-align">
-                        <a href="{{ url_for('edit_account', user_id=user._id) }}" class="waves-effect waves-light btn-small">Edit</a>
+                    <div class="center-align account-btn">
+                        <a href="{{ url_for('edit_account', user_id=user._id) }}" class="waves-effect waves-light btn-small black-text">Edit</a>
                         <a href="#modal3" class="modal-trigger waves-effect waves-light btn-small red darken-3">Delete</a>
                     </div>
                 </div>
