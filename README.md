@@ -128,6 +128,10 @@ The page is also equipped with a footer with social icons for more viewing pleau
 ![Modal](/static/images/readme-img/modal.png)
 Modal example, there are 3 in total which are delete recipe/delete account or delete category, however the delete category is only accesible to admins. Each modal is the same but the text inside corresponds with the button that is clicked.
 
+### Database design:
+
+![Db design](/static/images/readme-img/db-lucid.png)
+Above is my database design which I created using Lucic Chart, I am using mongoDB which is a non-relational database.
 
 ## Testing:
 
