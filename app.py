@@ -250,7 +250,7 @@ def edit_recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     # Checks if recipe exist and if author match or admin
     if recipe is None or recipe.get(
-        'author_id') != session["user"] and session["user"] != "admin":
+            'author_id') != session["user"] and session["user"] != "admin":
         flash("You are not authorized to access this recipe")
         return redirect(url_for("get_recipes"))
 
@@ -268,12 +268,16 @@ def edit_recipe(recipe_id):
             "author_id": session["user"]
         }
         mongo.db.recipes.update_one(
-            {"_id": ObjectId(recipe_id)}, {"$set": update_recipe})
+            {"_id": ObjectId(recipe_id)},
+            {"$set": update_recipe}
+            )
         flash("Your recipe has been updated")
         return redirect(url_for("get_recipes"))
 
-    return render_template("edit_recipe.html",
-     recipe=recipe, categories=categories)
+    return render_template(
+        "edit_recipe.html",
+        recipe=recipe,
+        categories=categories)
 
 
 # Route for delete recipe
@@ -287,7 +291,7 @@ def delete_recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     # Checks if recipe exist and if author match or admin
     if recipe is None or recipe.get(
-        'author_id') != session["user"] and session["user"] != "admin":
+            'author_id') != session["user"] and session["user"] != "admin":
         flash("You are not authorized to access this recipe")
         return redirect(url_for("get_recipes"))
 
@@ -381,6 +385,7 @@ def internal_server_error(error):
 
 # Runs flask app
 if __name__ == "__main__":
-    app.run(host=os.environ.get("IP"),
+    app.run(
+        host=os.environ.get("IP"),
         port=int(os.environ.get("PORT")),
         debug=True)
