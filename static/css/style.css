@@ -2,6 +2,9 @@ body {
     background-color: #d3d2d2;
 }
 
+label {
+    color: rgb(77, 75, 75) !important;
+}
 .flashes {
     text-align: center;
     background-color: yellow;
@@ -98,6 +101,10 @@ nav ul a {
 
 .vr-button a {
     color: black;
+    font-weight: bold;
+}
+
+.account-btn {
     font-weight: bold;
 }
 
