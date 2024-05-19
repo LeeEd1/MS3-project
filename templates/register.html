@@ -13,6 +13,7 @@
                         <i class="fas fa-envelope prefix"></i>
                         <input id="email" name="email" type="email" minlength="5" maxlength="50" class="validate" required>
                         <label for="email">Email</label>
+                        <span class="helper-text" data-error="Please use a valid email format"></span>
                     </div>
                 </div>
                 <div class="row">
@@ -21,11 +22,13 @@
                         <i class="fas fa-user prefix"></i>
                         <input id="first_name" name="first_name" type="text" minlength="2" maxlength="20" class="validate" required>
                         <label for="first_name">First Name</label>
+                        <span class="helper-text" data-error="First name must be between 2-20 characters"></span>
                     </div>
                     <!-- Last name -->
                     <div class="input-field col s5">
                         <input id="last_name" name="last_name" type="text" minlength="2" maxlength="20" class="validate" required>
                         <label for="last_name">Last Name</label>
+                        <span class="helper-text" data-error="Last name must be between 2-20 characters"></span>
                     </div>
                 </div>
                 <div class="row">
@@ -34,12 +37,14 @@
                         <i class="fas fa-user-plus prefix"></i>
                         <input id="username" name="username" type="text" minlength="5" maxlength="15" class="validate" required>
                         <label for="username">Username</label>
+                        <span class="helper-text" data-error="Last name must be between 5-15 characters"></span>
                     </div>
                     <!-- Fav cuisine -->
                     <div class="input-field col s12">
                         <i class="fas fa-user-plus prefix"></i>
-                        <input id="fav_cuisine" name="fav_cuisine" type="text" minlength="5" maxlength="15" class="validate" required>
+                        <input id="fav_cuisine" name="fav_cuisine" type="text" minlength="4" maxlength="15" class="validate" required>
                         <label for="fav_cuisine">Favourite Cuisine</label>
+                        <span class="helper-text" data-error="Cuisine must be between 4-15 characters"></span>
                     </div>
                 </div>
                 <div class="row">
@@ -48,6 +53,7 @@
                         <i class="fas fa-user-lock prefix"></i>
                         <input id="password" name="password" type="password" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9!@#$%^&*()_+]{5,15}$" class="validate" required>
                         <label for="password">Password</label>
+                        <span class="helper-text" data-error="Password must be between 5-15 characters and can contain @#$%^&*()_+]"></span>
                     </div>
                 </div>
                 <div class="row">
@@ -56,6 +62,7 @@
                         <i class="fas fa-user-lock prefix"></i>
                         <input id="confirm" name="confirm" type="password" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9!@#$%^&*()_+]{5,15}$" class="validate" required>
                         <label for="confirm">Confirm Password</label>
+                        <span class="helper-text" data-error="Password must be between 5-15 characters and can contain @#$%^&*()_+]"></span>
                     </div>
                 </div>
                 <div class="row">

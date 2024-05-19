@@ -13,6 +13,7 @@
                         <i class="fas fa-envelope prefix"></i>
                         <input id="email" name="email" type="email" minlength="5" maxlength="50" class="validate" required>
                         <label for="email">Email</label>
+                        <span class="helper-text" data-error="Please use a valid email format"></span>
                     </div>
                 </div>
                 <!-- Password field -->
@@ -21,6 +22,7 @@
                         <i class="fas fa-user-lock prefix"></i>
                         <input id="password" name="password" type="password" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9!@#$%^&*()_+]{5,15}$" class="validate" required>
                         <label for="password">Password</label>
+                        <span class="helper-text" data-error="Password must be between 5-15 characters and can contain !@#$%^&*()_+"></span>
                     </div>
                 </div>
                 <!-- Log in button -->
