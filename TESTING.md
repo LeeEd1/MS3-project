@@ -190,8 +190,10 @@ I also had a few errors with continuation lines and at first I was struggling to
 
 I passed my file through js hint, the file only contains Jquery code and shows no erros however it states $ is undefined which is not an issue because it's related to jquery.
 
-### Browsers & devices tested
+### Browsers & devices tested:
 
-- I have tested the site on Chrome, FireFox, Edge & safari with no issues.
-- I tested the site accross multiple device platforms ranging from my Desktop pc to a galaxy fold (Smallest screensize availabe) with no issues or layout errors found.
+During my testing phases I have tested this site heavily on the devices that are in my household which are predominantly android and windows and I corrected issues as I found them.
+I had issues with forms on galaxy fold with the forms overlapping which I have corrected to the best of my ability. The site has been tested on galaxy s22, galaxy zfold4, alienware m15 r6, galaxy tab s7 and a desk top pc which are all fully functional.
+
+I have also tested this site on an iphone14 and have checked through developer tools all the available Apple devices, the only downside to me testing these through devtools is it doesnt hold the software that could potentially cause bugs however I should have found these bugs on the iphone14 I physically tested thanks to my sister.
   
