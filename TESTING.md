@@ -1,5 +1,28 @@
 ## Testing:
 
+### User story testing:
+
+
+|Story                                                                                      |Page          |Documentation                                                       | 
+|-------------------------------------------------------------------------------------------|------------------------|----------------------------------------------------------|
+|Clear Information on what the site is about and a button to register if interested         |Home page               |![Home](/static/images/readme-img/landing-page.png)       |
+|Clear navigation menu which collapses on smaller devices                                   |Home Page               |![Nav2](/static/images/readme-img/new-nav.png)            |
+|Recipes page has all the recipes listed clearly with a easy to use recipe filter at the top|Recipe page             |![Recipes](/static/images/readme-img/recipes-newuser.png) |
+|Throughout the page there are informative prompts flash messages                           |All pages               |![Field-prompt](/static/images/test-img/field-prompt.png) |
+|Throughout the page there are informative prompts for fields                               |All pages with forms    |![Field-prompt](/static/images/test-img/field-prompt.png) |
+|The footer of the page was kept minimal just with socials links for viewing pleasure       |All pages               |![Footer](/static/images/readme-img/footer.png)           |
+
+|Story                                                                                                     |Page          |Documentation                                                       | 
+|----------------------------------------------------------------------------------------------------------|------------------------|----------------------------------------------------------|
+|Clear Information on what the site is about and a button to View recipe                                   |Home page               |![Home](/static/images/readme-img/landing-page.png)       |
+|Clear navigation menu which collapses on smaller devices                                                  |Home Page               |![Nav2](/static/images/readme-img/nav-bar.png)            |
+|Recipes are listed clearly with a easy to use recipe filter at the top with edit/delete BTN if owner of recipe|Recipe page         |![Recipes](/static/images/readme-img/recipes-user.png)    |
+|Add recipe page features a form that is easy to read where the user gets prompted with any errors in field|Add recipe page         |![Add recipe](/static/images/readme-img/add-recipe.png)   |
+|Edit recipe page features a form that is pre filled with the data from DB                                 |Edit recipe page        |![Add recipe](/static/images/readme-img/er-form.png)      |
+|Account page features a simple card that is easy to read where the user can delete or edit account        |Account page            |![Field-prompt](/static/images/test-img/field-prompt.png) |
+|Throughout the page there are informative prompts flash messages                                          |All pages               |![Field-prompt](/static/images/test-img/field-prompt.png) |
+|Throughout the page there are informative prompts for fields                                              |All pages with forms    |![Field-prompt](/static/images/test-img/field-prompt.png) |
+|The footer of the page was kept minimal just with socials links for viewing pleasure                      |All pages               |![Footer](/static/images/readme-img/footer.png)           |
 
 ### Manual testing
 
@@ -81,10 +104,10 @@ HTML Correction:
 CSS error:
 ![CSS-error](/static/images/test-img/css-error.png)
 
+I had 1 error when checking CSS code through [w3c](https://jigsaw.w3.org/css-validator/). This is due to the materialize library I am using, I tried to correct this issue with a manual CSS rule but this was unsuccessful. Due to my time constraints I didn't investigate this any further and removed the style rule because I dont think this will cause any issues.
+
 CSS Input check:
 ![CSS-error](/static/images/test-img/css-manual.png)
-
-I had 1 error when checking CSS code through [w3c](https://jigsaw.w3.org/css-validator/). This is due to the materialize library I am using, I tried to correct this issue with a manual CSS rule but this was unsuccessful. Due to my time constraints I didn't investigate this any further and removed the style rule.
 
 I knew the issue was through the library however I used direct input just for piece of mind as shown above.
 
@@ -147,11 +170,14 @@ Wile doing lighthouse tests I picked up the side nav trigger issue "Links do not
 ### CI python linter:
 
 ![Python linter](/static/images/test-img/linter-result.png)
-Above is the CI python linter score. I had quite a few errors to correct mainly white space and trailing white space, all errors have been fixed and is fully pep8 compliant.
+
+Above is the CI python linter score. I had quite a few errors to correct mainly white space and trailing white space, all errors have been fixed and is fully pep8 compliant. 
+I also had a few errors with continuation lines and at first I was struggling to break them up properly so I used the power of google and landed on [this](https://stackoverflow.com/questions/53162/how-can-i-do-a-line-break-line-continuation-in-python-split-up-a-long-line-of) thread and I was able to then clear all the errors found.
 
 ### JS Hint:
 
 ![Jshint](/static/images/test-img/js-hint.png)
+
 I passed my file through js hint, the file only contains Jquery code and shows no erros however it states $ is undefined which is not an issue because it's related to jquery.
 
 ### Browsers & devices tested
@@ -159,5 +185,3 @@ I passed my file through js hint, the file only contains Jquery code and shows n
 - I have tested the site on Chrome, FireFox, Edge & safari with no issues.
 - I tested the site accross multiple device platforms ranging from my Desktop pc to a galaxy fold (Smallest screensize availabe) with no issues or layout errors found.
   
-### Responsiveness
-
