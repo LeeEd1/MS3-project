@@ -87,6 +87,11 @@ Above is the recipes page new user will see.
 ![Recipes page](/static/images/readme-img/recipes-user.png)
 Above is the recipes page existing user will see which features a different nav bar and edit/delete if you own the recipe.
 
+![Edit recipe](/static/images/readme-img/er-form.png)
+Above is the edit recipe form the recipe owner or admin will see, the fields are pre-filled with the data from the DB to ensure easy editing for the user as they may only want to make slight ammendments.
+
+![Delete Recipe](/static/images/readme-img/dr-modal.png)
+
 ### Register page:
 
 ![Register page](/static/images/readme-img/register.png)
@@ -128,10 +133,66 @@ The page is also equipped with a footer with social icons for more viewing pleau
 ![Modal](/static/images/readme-img/modal.png)
 Modal example, there are 3 in total which are delete recipe/delete account or delete category, however the delete category is only accesible to admins. Each modal is the same but the text inside corresponds with the button that is clicked.
 
+### Flashed messages:
+
+The page is also equipped with flash messages to inform the user that their action was successfull and keep them informed every step of the way with clear concise messages. Here is an example below. The message changes depending on the action that is taken.
+
+![Flash message](/static/images/readme-img/flash.png)
+
+### Page security:
+
+Throughout Tasty Trove there are security measures in place like defensive redirects and werkzeug hashed password for the users password, this is stored in my DB. I have tried to cover every basis that I am aware of by checking if the user is the recipe owner or admin. I have also blocked (to the best of my knowlege) users forcing entry by manipulating the URL.
+
+
 ### Database design:
 
 ![Db design](/static/images/readme-img/db-lucid.png)
-Above is my database design which I created using Lucic Chart, I am using mongoDB which is a non-relational database.
+
+Above is my database design which I created using Lucic Chart, I am using mongoDB which is a non-relational database with unstructured data that has high flexibility and performance.
+
+#### Collections:
+
+My database is callted tasty_trove which has 3 collections as follows:
+
+##### Categories:
+
+|Key          |Type      |
+|-------------|----------|
+|_id          |ObjectId()|
+|Category_name|String    |
+
+The above field is only managed by the user admin. This stores any categories added/edited to the page.
+
+##### Users:
+
+|Key          |Type                 |
+|-------------|---------------------|
+|_id          |ObjectId()           |
+|first_name   |String               |
+|last_name    |String               |
+|email        |String               |
+|username     |String               |
+|fav_cuisine  |String               |
+|password     |String(hash password)|
+|date_joined  |Datetime object      |
+|is_admin     |boolean              |
+
+The above is the users document that is stored in the DB when the new user registers. The first/last/username/fav_cuisine and date joined are used to display on the account page which can be edited except date joined. The username field is used to determine recipe owner however this is not displayed on the recipe its self.
+
+##### Recipes:
+
+|Key                |Type       |
+|-------------------|-----------|
+|_id                |ObjectId() |
+|category_name      |String     |
+|recipe_name        |String     |
+|cuisine            |String     |
+|recipe_ingredients |String     |
+|recipe_instructions|String     |
+|photo_url          |String     |
+|author_id          |String     |
+
+Above is the recipes document that is stored when the user submits a recipe. 
 
 ## Testing:
 
@@ -163,6 +224,7 @@ While creating Treasure trove I was continuously using dev tools throughout to c
 - Google fonts - For the fonts MedievalSharp and Gothic
 - Balsamiq - For my wireframes
 - Snipping tool - for all my snippets for readme.
+- Lucid chart - For my db Structure
 
 ## Deployment
 
