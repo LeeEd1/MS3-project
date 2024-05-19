@@ -2,15 +2,18 @@
 
 ### User story testing:
 
+#### New users:
 
 |Story                                                                                      |Page          |Documentation                                                       | 
 |-------------------------------------------------------------------------------------------|------------------------|----------------------------------------------------------|
 |Clear Information on what the site is about and a button to register if interested         |Home page               |![Home](/static/images/readme-img/landing-page.png)       |
 |Clear navigation menu which collapses on smaller devices                                   |Home Page               |![Nav2](/static/images/readme-img/new-nav.png)            |
 |Recipes page has all the recipes listed clearly with a easy to use recipe filter at the top|Recipe page             |![Recipes](/static/images/readme-img/recipes-newuser.png) |
-|Throughout the page there are informative prompts flash messages                           |All pages               |![Field-prompt](/static/images/test-img/field-prompt.png) |
+|Throughout the page there are informative prompts flash messages                           |All pages               |![Field-prompt](/static/images/test-img/flash.png)        |
 |Throughout the page there are informative prompts for fields                               |All pages with forms    |![Field-prompt](/static/images/test-img/field-prompt.png) |
 |The footer of the page was kept minimal just with socials links for viewing pleasure       |All pages               |![Footer](/static/images/readme-img/footer.png)           |
+
+#### Existing users:
 
 |Story                                                                                                     |Page          |Documentation                                                       | 
 |----------------------------------------------------------------------------------------------------------|------------------------|----------------------------------------------------------|
@@ -19,10 +22,17 @@
 |Recipes are listed clearly with a easy to use recipe filter at the top with edit/delete BTN if owner of recipe|Recipe page         |![Recipes](/static/images/readme-img/recipes-user.png)    |
 |Add recipe page features a form that is easy to read where the user gets prompted with any errors in field|Add recipe page         |![Add recipe](/static/images/readme-img/add-recipe.png)   |
 |Edit recipe page features a form that is pre filled with the data from DB                                 |Edit recipe page        |![Add recipe](/static/images/readme-img/er-form.png)      |
-|Account page features a simple card that is easy to read where the user can delete or edit account        |Account page            |![Field-prompt](/static/images/test-img/field-prompt.png) |
-|Throughout the page there are informative prompts flash messages                                          |All pages               |![Field-prompt](/static/images/test-img/field-prompt.png) |
+|Account page features a simple card that is easy to read where the user can delete or edit account        |Account page            |![Field-prompt](/static/images/readme-img/account.png)    |
+|Throughout the page there are informative prompts flash messages (Text changes depending on action)       |All pages               |![Field-prompt](/static/images/test-img/flash.png)        |
 |Throughout the page there are informative prompts for fields                                              |All pages with forms    |![Field-prompt](/static/images/test-img/field-prompt.png) |
 |The footer of the page was kept minimal just with socials links for viewing pleasure                      |All pages               |![Footer](/static/images/readme-img/footer.png)           |
+
+#### Admin user:
+  
+|Story                                                                                                     |Page                    |Documentation                                        | 
+|----------------------------------------------------------------------------------------------------------|------------------------|-----------------------------------------------------|
+|Admin page features current categories with option to add/edit or delete                                  |Admin page              |![Admin page](/static/images/readme-img/admin.png)   |
+|Admin is also able edit/delete any recipe on the page not just their own                                  |Recipes page            |![Admin page](/static/images/test-img/admin-dlt.png) |
 
 ### Manual testing
 
