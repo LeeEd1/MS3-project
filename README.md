@@ -3,6 +3,8 @@
 ![Site accross devices](/static/images/readme-img/amiresponsive.png)
 Tasty Trove was founded with the intention of fostering a community where food enthusiasts can freely share their favorite recipes, gain culinary inspiration, and explore diverse cuisines. Our platform encourages users to connect with like-minded individuals, discover new flavors, and embark on culinary adventures together.
 
+You can view the live site [Here](https://flask-tasty-trove-58ed4d985edf.herokuapp.com/)
+
 ## UX:
 
 ### Site purose
@@ -78,6 +80,8 @@ While creating my page I fully utilized [Materialize Css](https://materializecss
 ![Landing page](/static/images/readme-img/landing-page.png)
 Above is the landing page the new/registered user will see which features a full navbar to browse accessible pages and if a new user the necessary links to register if interested.
 
+![User landing](/static/images/readme-img/user-home.png)
+Above is the home page existing users will see which features a full navbar to view all the accessible pages.
 
 ### Recipes page:
 
@@ -275,13 +279,15 @@ os.environ.setdefault("MONGO_URI", "Your own value")
 os.environ.setdefault("PORT", "5000")
 os.environ.setdefault("SECRET_KEY", "Your own value")`
 
+## Credits:
+
 ### Content
 
 - [Color Hex](https://www.color-hex.com/color-palette/64222) For my color choices.
 - [Font Awesome](https://fontawesome.com/) For my icons.
 - [Google fonts](https://fonts.google.com/) For my fonts.
 
-## Media
+### Media
 
 I do not hold any rights to any images displayed on this site as they are uploaded by photo URL, this site is purely educational purposes only.
 

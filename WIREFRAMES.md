@@ -34,3 +34,5 @@ Only Admin can see the admin tab.
 ### Admin page tablet and desktop:
 
 ![Admin tab desk](/static/images/wire-img/admin-user.png)
+
+Click here to return back to [README.md](README.md)

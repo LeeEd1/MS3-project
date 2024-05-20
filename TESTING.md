@@ -197,3 +197,4 @@ I had issues with forms on galaxy fold with the forms overlapping which I have c
 
 I have also tested this site on an iphone14 and have checked through developer tools all the available Apple devices, the only downside to me testing these through devtools is it doesnt hold the software that could potentially cause bugs however I should have found these bugs on the iphone14 I physically tested thanks to my sister.
   
+Click here to return back to [README.md](README.md)
