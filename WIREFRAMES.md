@@ -2,6 +2,12 @@
 
 ## New users:
 
+### New home page:
+
+![New home](/static/images/wire-img/new-home.png)
+
+After a meeting with my mentor Spencer we had a discussion about my home page and came to a conclusion that it was a bit pointless, my mentor gave me some pointers and tips of how this could be improved, I was very greatful of this help as I was overcomplicating something that was more easily achievable.
+
 ### Desktop:
 
 ![New user pages](/static/images/wire-img/new-user.png)
