@@ -1,7 +1,7 @@
 # Tasty Trove
 
 ![Site accross devices](/static/images/readme-img/amiresponsive.png)
-Tasty Trove was founded with the intention of fostering a community where food enthusiasts can freely share their favorite recipes, gain culinary inspiration, and explore diverse cuisines. Our platform encourages users to connect with like-minded individuals, discover new flavors, and embark on culinary adventures together.
+Tasty Trove was founded with the intention of fostering a community where food enthusiasts can freely share their favorite recipes, gain culinary inspiration, and explore diverse cuisines. Our platform encourages users to connect with like-minded individuals, discover new flavours, and embark on a culinary adventure together.
 
 You can view the live site [Here](https://flask-tasty-trove-58ed4d985edf.herokuapp.com/)
 
@@ -21,14 +21,14 @@ The site audience is aimed at anybody willing and able, even children with paren
 
 ### Communication
 
-The communication of the page is designed to be easily understandable for any user. It features clear buttons, a user friendly modal pop up and employs easy to read fonts with distinctly displayed colors, aiming for universal accessability.
+The communication of the page is designed to be easily understood by any user. It features clear buttons, a user friendly modal pop up and employs easy to read fonts with distinctly displayed colours, aiming for universal accessability.
 
 ### Registered user goals
 
 - Discover new recipes.
 - Share their own Recipes.
-- Learning new cuisines and cooking skills.
-- Be able to update an existing recipe if they have found a way to make it better.
+- Learn new cuisines and cooking skills.
+- Be able to update an existing recipe if they have found a way to improve it.
 - Delete a recipe if they no longer wish to share it.
 
 ### New user goals
@@ -36,7 +36,7 @@ The communication of the page is designed to be easily understandable for any us
 - Be able to easily navigate the site.
 - Browse existing recipes.
 - Be able to register if interested.
-- Be able to log out after browsing 
+- Be able to log out after browsing.
 
 ### Future user goals
 
@@ -78,7 +78,7 @@ While creating my page I fully utilized [Materialize Css](https://materializecss
 ### Landing Page:
 
 ![Landing page](/static/images/readme-img/landing-page.png)
-Above is the landing page the new/registered user will see which features a full navbar to browse accessible pages and if a new user the necessary links to register if interested.
+Above is the landing page the new/registered user will see which features a full navbar to browse accessible pages. It allows a new user to register to the site using the necessary links if interested.
 
 ![User landing](/static/images/readme-img/user-home.png)
 Above is the home page existing users will see which features a full navbar to view all the accessible pages.
@@ -92,7 +92,7 @@ Above is the recipes page new user will see.
 Above is the recipes page existing user will see which features a different nav bar and edit/delete if you own the recipe.
 
 ![Edit recipe](/static/images/readme-img/er-form.png)
-Above is the edit recipe form the recipe owner or admin will see, the fields are pre-filled with the data from the DB to ensure easy editing for the user as they may only want to make slight ammendments.
+Above is the edit recipe form the recipe owner or admin will see. The fields are pre-filled with the data from the DB to ensure easy editing for the user as only slight ammendments may be required.
 
 ![Delete Recipe](/static/images/readme-img/dr-modal.png)
 
@@ -130,22 +130,22 @@ Above is the navbar existing user will see, however the admin tab is only access
 ### Footer:
 
 ![Footer](/static/images/readme-img/footer.png)
-The page is also equipped with a footer with social icons for more viewing pleaure.
+The page is also equipped with a footer with social icons for more viewing pleasure.
 
 ### Modals:
 
 ![Modal](/static/images/readme-img/modal.png)
-Modal example, there are 3 in total which are delete recipe/delete account or delete category, however the delete category is only accesible to admins. Each modal is the same but the text inside corresponds with the button that is clicked.
+Modal example, there are 3 in total which are delete recipe/delete account or delete category. However, the delete category is only accesible to admins. Each modal is the same but the text inside corresponds with the button that is clicked.
 
 ### Flashed messages:
 
-The page is also equipped with flash messages to inform the user that their action was successfull and keep them informed every step of the way with clear concise messages. Here is an example below. The message changes depending on the action that is taken.
+The page is also equipped with flash messages to inform the user that their action was successful and keep them informed every step of the way with clear concise messages. Here is an example below. The message changes depending on the action that is taken.
 
 ![Flash message](/static/images/readme-img/flash.png)
 
 ### Page security:
 
-Throughout Tasty Trove there are security measures in place like defensive redirects and werkzeug hashed password for the users password, this is stored in my DB. I have tried to cover every basis that I am aware of by checking if the user is the recipe owner or admin. I have also blocked (to the best of my knowlege) users forcing entry by manipulating the URL.
+Throughout Tasty Trove there are security measures in place like defensive redirects and werkzeug hashed password for the users password, this is stored in my DB. I have tried to cover every basis that I am aware of by checking if the user is the recipe owner or admin. I have also blocked (to the best of my knowledge) users forcing entry by manipulating the URL.
 
 
 ### Database design:
@@ -181,7 +181,7 @@ The above field is only managed by the user admin. This stores any categories ad
 |date_joined  |Datetime object      |
 |is_admin     |boolean              |
 
-The above is the users document that is stored in the DB when the new user registers. The first/last/username/fav_cuisine and date joined are used to display on the account page which can be edited except date joined. The username field is used to determine recipe owner however this is not displayed on the recipe its self.
+The above is the users document that is stored in the DB when the new user registers. The first/last/username/fav_cuisine and date joined are used to display on the account page which can be edited except date joined. The username field is used to determine recipe owner, however this is not displayed on the recipe itself.
 
 ##### Recipes:
 
@@ -204,7 +204,7 @@ Please refer to [TESTING.md](TESTING.md)
 
 ### Bugs
 
-While creating Treasure trove I was continuously using dev tools throughout to check for design issues/bugs and corrected them as I found them. To my knowlege there are no known bugs to date.
+While creating Treasure trove I was continuously using dev tools throughout to check for design issues/bugs and corrected them as necessary. To my knowlege there are no known bugs to date.
 
 
 ## Technologies used:
@@ -293,7 +293,6 @@ I do not hold any rights to any images displayed on this site as they are upload
 
 ### People
 
-- I would like to thank my mentor [Spencer barriball](https://github.com/5pence) for His support throughout my first and second project has been immense and greatly appreciated.
-- I would like to thank my friend [Nicholas Mobey](https://www.linkedin.com/in/nicolas-mobey-79149049) for His support constantly throughout my projects pushing me on when the going gets tough and guiding me where it's neeeded.
+- I would like to thank my mentor [Spencer barriball](https://github.com/5pence) for his support throughout my third project and again pointing me in the right direction and showing me new/easier ways to do things.
+- I would like to thank my friend [Nicholas Mobey](https://www.linkedin.com/in/nicolas-mobey-79149049) for his continuous support. He holds a wealth of knowledge and points me in the right direction whilst challenging me to discover ways to complete the task independently.
 - I would like to thank the [CI Tutor support](https://learn.codeinstitute.net/ci_support/level5diplomainwebappdevelopment/tutor) for their ongoing support throughout my projects.
-- I would like to also take the time to thank [Code Institute](https://codeinstitute.net/) as a whole, I have faced a very difficult few months in my home life and recieved nothing but support from CI student care and for that I am very greatful.
