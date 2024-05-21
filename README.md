@@ -56,13 +56,15 @@ Please refer to [WIREFRAMES.md](WIREFRAMES.md)
 
 ### Typography
 
-MedievalSharp was selected for the heading of my page with gothic selected for the body of my page. All fonts obtained from googlefonts.
+I chose Merriweather and Open Sans for my font choices as I find them to be nice and easy to read and combining the both gives a clean and modern Look.
 
 ### Color scheme
 
-My color scheme was orange black and white as shown below:
+My color scheme was orange, black and white as shown below:
 
 ![Home/Recipes Wireframes](/static/images/readme-img/colors.png)
+
+The page also features Yellow, grey and red buttons along with an offwhite/light grey background to allow for the card to stand out.
 
 ### Images
 
@@ -229,6 +231,7 @@ While creating Treasure trove I was continuously using dev tools throughout to c
 - Balsamiq - For my wireframes
 - Snipping tool - for all my snippets for readme.
 - Lucid chart - For my db Structure
+- Favicon.io - for my favicon
 
 ## Deployment
 
